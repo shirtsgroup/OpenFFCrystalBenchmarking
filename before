@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<State openmmVersion="7.6" time="0" type="State" version="1">
+	<PeriodicBoxVectors>
+		<A x="2" y="0" z="0"/>
+		<B x="0" y="2" z="0"/>
+		<C x="0" y="0" z="2"/>
+	</PeriodicBoxVectors>
+	<Parameters/>
+	<Positions>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+		<Position x="0" y="0" z="0"/>
+	</Positions>
+	<Velocities>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+		<Velocity x="0" y="0" z="0"/>
+	</Velocities>
+	<IntegratorParameters/>
+</State>

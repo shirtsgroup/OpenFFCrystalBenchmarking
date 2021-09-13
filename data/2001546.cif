@@ -1,0 +1,297 @@
+#------------------------------------------------------------------------------
+#$Date: 2018-01-30 16:30:45 +0200 (Tue, 30 Jan 2018) $
+#$Revision: 205898 $
+#$URL: file:///home/coder/svn-repositories/cod/cif/2/00/15/2001546.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/. The original data for this entry
+# were provided by IUCr Journals, http://journals.iucr.org/.
+#
+# The file may be used within the scientific community so long as
+# proper attribution is given to the journal article from which the
+# data were obtained.
+#
+data_2001546
+loop_
+_publ_author_name
+'Freer, A. A.'
+'Bunyan, J. M.'
+'Shankland, N.'
+'Sheen, D. B.'
+_publ_section_title
+;
+ Structure of (<i>S</i>)-(+)-ibuprofen
+;
+_journal_issue                   7
+_journal_name_full               'Acta Crystallographica Section C'
+_journal_page_first              1378
+_journal_page_last               1380
+_journal_paper_doi               10.1107/S0108270193000629
+_journal_volume                  49
+_journal_year                    1993
+_chemical_formula_sum            'C13 H18 O2'
+_chemical_formula_weight         206.3
+_space_group_crystal_system      monoclinic
+_space_group_IT_number           4
+_space_group_name_Hall           'P 2yb'
+_space_group_name_H-M_alt        'P 1 21 1'
+_atom_type_scat_source           IntTabIV
+_cell_angle_alpha                90.
+_cell_angle_beta                 112.89(3)
+_cell_angle_gamma                90.
+_cell_formula_units_Z            4
+_cell_length_a                   12.462(3)
+_cell_length_b                   8.035(3)
+_cell_length_c                   13.539(4)
+_cell_measurement_reflns_used    25
+_cell_measurement_temperature    291
+_cell_measurement_theta_max      15
+_cell_measurement_theta_min      12
+_cell_volume                     1248.9(7)
+_diffrn_measurement_device       CAD-4
+_diffrn_measurement_method       \w/2\q
+_diffrn_radiation_type           MoK\a
+_diffrn_radiation_wavelength     0.71069
+_diffrn_reflns_limit_h_max       15
+_diffrn_reflns_limit_h_min       0
+_diffrn_reflns_limit_k_max       10
+_diffrn_reflns_limit_k_min       0
+_diffrn_reflns_limit_l_max       17
+_diffrn_reflns_limit_l_min       -17
+_diffrn_reflns_number            2911
+_diffrn_reflns_theta_max         27
+_diffrn_standards_decay_%        <5
+_diffrn_standards_interval_time  120
+_diffrn_standards_number         2
+_exptl_absorpt_correction_type   none
+_exptl_crystal_colour            Colourless
+_exptl_crystal_density_diffrn    1.10
+_exptl_crystal_description       Needle
+_exptl_crystal_size_max          0.5
+_exptl_crystal_size_mid          0.5
+_exptl_crystal_size_min          0.2
+_refine_diff_density_max         0.15
+_refine_diff_density_min         -0.19
+_refine_ls_goodness_of_fit_obs   3.09
+_refine_ls_hydrogen_treatment    noref
+_refine_ls_number_parameters     271
+_refine_ls_number_reflns         1259
+_refine_ls_R_factor_obs          0.056
+_refine_ls_shift/esd_max         0.22
+_refine_ls_structure_factor_coef F
+_refine_ls_weighting_details     'w = 1/\s^2^(F~o~)'
+_refine_ls_weighting_scheme      calc
+_refine_ls_wR_factor_obs         0.067
+_reflns_number_observed          1259
+_reflns_number_total             2911
+_reflns_observed_criterion       I>3.0\s(I)
+_cod_data_source_file            al1030.cif
+_cod_data_source_block           al1030_structure_1_of_1
+_cod_depositor_comments
+;
+The following automatic conversions were performed:
+
+'_refine_ls_weighting_scheme' value '1/\s^2^(F~o~)' was changed to
+'calc'. New tag '_refine_ls_weighting_details' was created. The value
+of the new tag was set to 'w = 1/\s^2^(F~o~)'.
+
+Automatic conversion script
+Id: cif_fix_values 3143 2015-03-26 13:38:13Z robertas 
+;
+_cod_original_cell_volume        1248.8
+_cod_database_code               2001546
+loop_
+_space_group_symop_id
+_space_group_symop_operation_xyz
+1 x,y,z
+2 -x,y+1/2,-z
+loop_
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_U_iso_or_equiv
+O(1A) -.9649(5) -.9020(10) -.7762(4) .093
+O(2A) -1.0849(4) -.7330 -.8958(4) .076
+C(1A) -.9875(7) -.7597(13) -.8305(6) .068
+C(2A) -.8907(6) -.6410(12) -.8011(6) .077
+C(3A) -.9005(7) -.5283(13) -.8955(6) .092
+C(4A) -.8838(6) -.5465(12) -.6991(6) .063
+C(5A) -.9503(7) -.4072(13) -.7049(6) .073
+C(6A) -.9468(6) -.3258(12) -.6166(6) .066
+C(7A) -.8766(7) -.3801(12) -.5159(7) .075
+C(8A) -.8111(7) -.5229(13) -.5092(6) .082
+C(9A) -.8140(7) -.6038(13) -.6016(6) .079
+C(10A) -.8637(7) -.2878(15) -.4112(6) .092
+C(11A) -.7653(7) -.1641(12) -.3729(5) .076
+C(12A) -.7429(7) -.0998(15) -.2646(6) .105
+C(13A) -.7843(7) -.0218(13) -.4485(7) .090
+O(1B) -.2680(4) .0713(9) .0491(4) .075
+O(2B) -.1496(5) -.1000(8) .1688(4) .087
+C(1B) -.2439(7) -.0699(12) .1008(6) .061
+C(2B) -.3420(6) -.1968(12) .0675(5) .068
+C(3B) -.4567(6) -.1145(13) .0514(6) .094
+C(4B) -.3400(6) -.2878(11) -.0325(5) .058
+C(5B) -.2668(6) -.4213(11) -.0168(5) .059
+C(6B) -.2623(6) -.5106(11) -.1041(5) .060
+C(7B) -.3324(6) -.4670(11) -.2057(6) .058
+C(8B) -.4058(7) -.3294(12) -.2216(6) .070
+C(9B) -.4088(6) -.2404(11) -.1353(5) .062
+C(10B) -.3372(6) -.5633(11) -.3051(5) .066
+C(11B) -.4390(7) -.6831(12) -.3517(6) .074
+C(12B) -.4338(10) -.8180(15) -.2766(8) .122
+C(13B) -.4477(8) -.7513(13) -.4568(6) .107
+H(O1A) -1.065 -.9751 -.8120 ?
+H(O1B) -.1687 .1309 .0866 ?
+H(1A) -.8100 -.7068 -.7825 ?
+H(2A) -.8319 -.4389 -.8766 ?
+H(3A) -.9051 -.6006 -.9617 ?
+H(4A) -.9814 -.462 -.9134 ?
+H(5A) -1.005 -.3595 -.7818 ?
+H(6A) -1.003 -.2199 -.6271 ?
+H(7A) -.7514 -.5663 -.4329 ?
+H(8A) -.7622 -.7144 -.5944 ?
+H(9A) -.9437 -.2199 -.4280 ?
+H(10A) -.8548 -.3756 -.3468 ?
+H(11A) -.6916 -.2254 -.3744 ?
+H(12A) -.6695 -.0149 -.2368 ?
+H(13A) -.8167 -.0399 -.2627 ?
+H(14A) -.7201 -.2057 -.212 ?
+H(15A) -.712 .065 -.4126 ?
+H(16A) -.7902 -.0703 -.5256 ?
+H(17A) -.8624 .0448 -.4608 ?
+H(1B) -.3211 -.2859 .1291 ?
+H(2B) -.5253 -.2066 .0289 ?
+H(3B) -.4531 -.0553 .1228 ?
+H(4B) -.4780 -.0246 -.0123 ?
+H(5B) -.2118 -.4594 .0654 ?
+H(6B) -.2041 -.6161 -.0915 ?
+H(7B) -.4634 -.2942 -.3035 ?
+H(8B) -.4588 -.1277 -.1497 ?
+H(9B) -.3351 -.4765 -.3647 ?
+H(10B) -.2592 -.6374 -.2794 ?
+H(11B) -.517 -.6141 -.3654 ?
+H(12B) -.5086 -.8973 -.3092 ?
+H(13B) -.3560 -.8873 -.2613 ?
+H(14B) -.4302 -.7684 -.2002 ?
+H(15B) -.5223 -.8323 -.4902 ?
+H(16B) -.4497 -.6576 -.5123 ?
+H(17B) -.3693 -.8241 -.4362 ?
+loop_
+_geom_angle_atom_site_label_1
+_geom_angle_atom_site_label_2
+_geom_angle_atom_site_label_3
+_geom_angle
+_geom_angle_publ_flag
+O(1A) C(1A) O(2A) 119.5(8) yes
+O(2A) C(1A) C(2A) 124.6(9) yes
+C(1A) C(2A) C(4A) 108.4(7) yes
+C(2A) C(4A) C(5A) 121.6(7) yes
+C(5A) C(4A) C(9A) 118.6(8) yes
+C(5A) C(6A) C(7A) 120.9(9) yes
+C(6A) C(7A) C(10A) 123.7(9) yes
+C(7A) C(8A) C(9A) 121.0(8) yes
+C(7A) C(10A) C(11A) 114.3(7) yes
+C(10A) C(11A) C(13A) 112.3(7) yes
+O(1B) C(1B) O(2B) 122.6(8) yes
+O(2B) C(1B) C(2B) 121.7(8) yes
+C(1B) C(2B) C(4B) 106.9(6) yes
+C(2B) C(4B) C(5B) 118.0(6) yes
+C(5B) C(4B) C(9B) 119.3(7) yes
+C(5B) C(6B) C(7B) 120.1(8) yes
+C(6B) C(7B) C(10B) 123.3(8) yes
+C(7B) C(8B) C(9B) 120.7(7) yes
+C(7B) C(10B) C(11B) 115.2(6) yes
+C(10B) C(11B) C(13B) 111.6(7) yes
+O(1A) C(1A) C(2A) 115.7(8) yes
+C(1A) C(2A) C(3A) 111.6(7) yes
+C(3A) C(2A) C(4A) 114.4(8) yes
+C(2A) C(4A) C(9A) 119.7(8) yes
+C(4A) C(5A) C(6A) 122.2(8) yes
+C(6A) C(7A) C(8A) 117.3(8) yes
+C(8A) C(7A) C(10A) 119.0(8) yes
+C(4A) C(9A) C(8A) 120.0(9) yes
+C(10A) C(11A) C(12A) 112.8(7) yes
+C(12A) C(11A) C(13A) 109.4(9) yes
+O(1B) C(1B) C(2B) 115.7(7) yes
+C(1B) C(2B) C(3B) 110.8(8) yes
+C(3B) C(2B) C(4B) 114.6(6) yes
+C(2B) C(4B) C(9B) 122.7(8) yes
+C(4B) C(5B) C(6B) 120.8(7) yes
+C(6B) C(7B) C(8B) 119.0(7) yes
+C(8B) C(7B) C(10B) 117.7(7) yes
+C(4B) C(9B) C(8B) 120.1(8) yes
+C(10B) C(11B) C(12B) 112.0(7) yes
+C(12B) C(11B) C(13B) 110.9(9) yes
+loop_
+_geom_bond_atom_site_label_1
+_geom_bond_atom_site_label_2
+_geom_bond_distance
+_geom_bond_publ_flag
+O(1A) C(1A) 1.329(13) yes
+C(1A) C(2A) 1.466(13) yes
+C(2A) C(4A) 1.549(12) yes
+C(4A) C(9A) 1.348(11) yes
+C(6A) C(7A) 1.374(12) yes
+C(7A) C(10A) 1.552(12) yes
+C(10A) C(11A) 1.505(14) yes
+C(11A) C(13A) 1.491(13) yes
+O(2B) C(1B) 1.202(10) yes
+C(2B) C(3B) 1.512(12) yes
+C(4B) C(5B) 1.370(12) yes
+C(5B) C(6B) 1.402(10) yes
+C(7B) C(8B) 1.397(12) yes
+C(8B) C(9B) 1.382(11) yes
+C(11B) C(12B) 1.470(15) yes
+O(2A) C(1A) 1.211(10) yes
+C(2A) C(3A) 1.533(13) yes
+C(4A) C(5A) 1.376(13) yes
+C(5A) C(6A) 1.347(12) yes
+C(7A) C(8A) 1.390(14) yes
+C(8A) C(9A) 1.398(12) yes
+C(11A) C(12A) 1.476(11) yes
+O(1B) C(1B) 1.306(11) yes
+C(1B) C(2B) 1.520(12) yes
+C(2B) C(4B) 1.548(10) yes
+C(4B) C(9B) 1.374(10) yes
+C(6B) C(7B) 1.358(10) yes
+C(7B) C(10B) 1.533(11) yes
+C(10B) C(11B) 1.521(12) yes
+C(11B) C(13B) 1.489(11) yes
+C(2A) H(1A) 1.075 yes
+C(3A) H(3A) 1.051 yes
+C(5A) H(5A) 1.070 yes
+C(8A) H(7A) 1.069 yes
+C(10A) H(9A) 1.081 yes
+C(11A) H(11A) 1.049 yes
+C(12A) H(13A) 1.047 yes
+C(13A) H(15A) 1.084 yes
+C(13A) H(17A) 1.066 yes
+C(3B) H(2B) 1.081 yes
+C(3B) H(4B) 1.076 yes
+C(6B) H(6B) 1.085 yes
+C(9B) H(8B) 1.073 yes
+C(10B) H(10B) 1.076 yes
+C(12B) H(12B) 1.073 yes
+C(12B) H(14B) 1.093 yes
+C(13B) H(16B) 1.057 yes
+O(1A) H(O1A) 1.291 yes
+C(3A) H(2A) 1.068 yes
+C(3A) H(4A) 1.081 yes
+C(6A) H(6A) 1.076 yes
+C(9A) H(8A) 1.080 yes
+C(10A) H(10A) 1.093 yes
+C(12A) H(12A) 1.085 yes
+C(12A) H(14A) 1.074 yes
+C(13A) H(16A) 1.090 yes
+C(2B) H(1B) 1.052 yes
+C(3B) H(3B) 1.063 yes
+C(5B) H(5B) 1.090 yes
+C(8B) H(7B) 1.098 yes
+C(10B) H(9B) 1.075 yes
+C(11B) H(11B) 1.070 yes
+C(12B) H(13B) 1.066 yes
+C(13B) H(15B) 1.080 yes
+C(13B) H(17B) 1.078 yes
+O(1B) H(O1B) 1.237 yes
