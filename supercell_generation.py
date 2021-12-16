@@ -1,6 +1,5 @@
-# Generate 3x3x3 supercells for all pdb files and apply cryst1 modifications
+# Generate supercells for all pdb files and apply cryst1 symmetry operations
 import math
-
 import pymol
 import os
 from openbabel import pybel
@@ -13,9 +12,16 @@ for f in os.listdir('data/PDB'):
     except Exception as e:
         print(e)
         continue
-    a_mult = math.ceil(18.0/mol.unitcell.GetA())
-    b_mult = math.ceil(18.0/mol.unitcell.GetB())
-    c_mult = math.ceil(18.0/mol.unitcell.GetC())
+    a_mult = math.ceil(20.0/mol.unitcell.GetA())
+    b_mult = math.ceil(20.0/mol.unitcell.GetB())
+    c_mult = math.ceil(20.0/mol.unitcell.GetC())
+    # add one extra cell in the smallest direction
+    if a_mult < b_mult and a_mult < c_mult:
+        a_mult = a_mult + 1
+    elif b_mult < c_mult and b_mult < a_mult:
+        b_mult = b_mult + 1
+    elif c_mult < a_mult and c_mult < b_mult:
+        c_mult = c_mult + 1
     # reinitialize to clear pymol
     pymol.cmd.reinitialize()
     pymol.cmd.load('data/PDB/' + f)

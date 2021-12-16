@@ -14,6 +14,7 @@ import warnings
 import logging
 import pandas as pd
 from scipy.optimize import minimize
+import csv
 
 # Functions to minimize energy with respect to box vectors
 # forces provide 3*n derivatives of energy
@@ -128,17 +129,19 @@ logging.basicConfig(filename='errors.log', filemode='w')
 rdktkw = RDKitToolkitWrapper()
 
 # Loading setup parameters
-forcefield = ForceField('openff-1.0.0.offxml')
+forcefield = ForceField('openff-2.0.0.offxml')
 # Load smiles csv file as pandas
 smiles = pd.read_csv('allcod.smi', names=['SMILES', 'COD ID'], sep='\t')
+# Initialize text file for rmsd values to be recorded
 with open('data/rmsd_values.txt','w') as f:
     f.write('COD ID\tRMSD\n')
-
+# Initialize empty array to store data from sucessful minimizations
+data = []
 for pdb in os.listdir('data/PDB'):
+    # load pdb with one copy of pdb file
+    cod_id = pdb.split('.')[0]
+    print(cod_id)
     try:
-        # load pdb with one copy of pdb file
-        cod_id = pdb.split('.')[0]
-        print(cod_id)
         try:
             # get smiles from all_smilies
             smiles_string = smiles.loc[smiles['COD ID'] == int(cod_id)]['SMILES'].values[0]
@@ -172,7 +175,7 @@ for pdb in os.listdir('data/PDB'):
         simulation.context.setPositions(positions)
 
         # set reporters
-        pdb_reporter = openmm.app.PDBReporter('data/trajectories/' + cod_id + '.pdb', 1)
+        pdb_reporter = openmm.app.PDBReporter('data/minimized_PDB_supercell/' + cod_id + '.pdb', 1)
         simulation.reporters.append(pdb_reporter)
         # set positions
         simulation.context.setPositions(positions)
@@ -180,30 +183,32 @@ for pdb in os.listdir('data/PDB'):
         simulation.saveState('data/initial_states/' + cod_id + '_initial.xml')
         orig_potential = simulation.context.getState(getEnergy=True).getPotentialEnergy()
         if orig_potential.value_in_unit(unit.kilojoule_per_mole) > 1e24:
+            #Skip if the initial energy evaluation is infeasibly high
             continue
         print('Initial Energy ' + str(orig_potential))
         # Minimize Energy and save final state
         print('Minimizing Energy!')
-        simulation.minimizeEnergy(maxIterations=100000) # If minimizing with openMM
+        simulation.minimizeEnergy(maxIterations=100000) # Perform initial minimization with openMM minimizer
+        mid_potential = simulation.context.getState(getEnergy=True).getPotentialEnergy()
         # # build x array to feed to minimizer
-        # box_vectors = pdb_file.topology.getPeriodicBoxVectors()
-        # A = np.array(box_vectors.value_in_unit(unit.nano * unit.meter))
-        # numpy_positions = simulation.context.getState(getPositions=True).getPositions(asNumpy=True)
-        # x = np.append(numpy_positions.flatten(), [A[0][0], A[1][0], A[1][1], A[2][0], A[2][1], A[2][2]])
-        # n = len(numpy_positions)
-        # # run minimizer
-        # result = minimize(box_energy, x, (simulation.context, n), method='L-BFGS-B', jac=jacobian, options={'maxiter': 100})
-        # print(result)
-        # x_new = result.x
+        box_vectors = pdb_file.topology.getPeriodicBoxVectors()
+        A = np.array(box_vectors.value_in_unit(unit.nano * unit.meter))
+        numpy_positions = simulation.context.getState(getPositions=True).getPositions(asNumpy=True)
+        x = np.append(numpy_positions.flatten(), [A[0][0], A[1][0], A[1][1], A[2][0], A[2][1], A[2][2]])
+        n = len(numpy_positions)
+        # run minimizer
+        result = minimize(box_energy, x, (simulation.context, n), method='L-BFGS-B', jac=jacobian, options={'maxiter': 100})
+        print(result)
+        x_new = result.x
         # # update simulation with minimized positions and box vectors
-        # positions_arr = np.empty([n, 3])
-        # for i in range(int(n)):
-        #     positions_arr[i][:] = x_new[i * 3:i * 3 + 3]
-        # simulation.context.setPositions(positions_arr)
-        # a = np.array([x_new[n * 3], 0, 0])
-        # b = np.array([x_new[n * 3 + 1], x_new[n * 3 + 2], 0])
-        # c = np.array([x_new[n * 3 + 3], x_new[n * 3 + 4], x_new[n * 3 + 5]])
-        # simulation.context.setPeriodicBoxVectors(a, b, c)
+        positions_arr = np.empty([n, 3])
+        for i in range(int(n)):
+           positions_arr[i][:] = x_new[i * 3:i * 3 + 3]
+        simulation.context.setPositions(positions_arr)
+        a = np.array([x_new[n * 3], 0, 0])
+        b = np.array([x_new[n * 3 + 1], x_new[n * 3 + 2], 0])
+        c = np.array([x_new[n * 3 + 3], x_new[n * 3 + 4], x_new[n * 3 + 5]])
+        simulation.context.setPeriodicBoxVectors(a, b, c)
 
         min_state = simulation.context.getState(getEnergy=True, getPositions=True, getForces=True)
         min_potential = min_state.getPotentialEnergy()
@@ -213,14 +218,31 @@ for pdb in os.listdir('data/PDB'):
         simulation.step(1)
 
         initial = mdtraj.load_pdb('data/PDB_supercell/' + cod_id + '_supercell.pdb')
-        final = mdtraj.load_pdb('data/trajectories/' + cod_id + '.pdb')
+        final = mdtraj.load_pdb('data/minimized_PDB_supercell/' + cod_id + '.pdb')
         rmsd = mdtraj.rmsd(initial, final)
+        data.append(
+            {
+                'COD ID': cod_id,
+                'RMSD': rmsd,
+                'Original Energy': orig_potential,
+                'Minimized Energy (OpenMM)': mid_potential,
+                'Minimized Energy (Cell Minimization)': min_potential,
+                'Original Box Vectors': A,
+                'Minimized Box Vectors': np.array([a, b, c])
+            })
         with open('data/rmsd_values.txt','a') as f:
             f.write('%s\t%s\n' % (cod_id, rmsd[0]))
     except Exception as e:
-        logging.error('Generic Error')
+        logging.error('Generic error with ID %s' % cod_id)
         logging.error(e)
         continue
+
+try:
+    d = pd.DataFrame(data)
+    d.to_csv('data/minimization_results.csv')
+    d.to_pickle('data/minimization_results.pkl')
+except Exception as e:
+    logging.error('Error with save of results data')
 
 
 
