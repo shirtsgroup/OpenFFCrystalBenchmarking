@@ -1,0 +1,75 @@
+Warning: Unable to load toolkit 'OpenEye Toolkit'. The Open Force Field Toolkit does not require the OpenEye Toolkits, and can use RDKit/AmberTools instead. However, if you have a valid license for the OpenEye Toolkits, consider installing them for faster performance and additional file format support: https://docs.eyesopen.com/toolkits/python/quickstart-python/linuxosx.html OpenEye offers free Toolkit licenses for academics: https://www.eyesopen.com/academic-licensing
+Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
+Warning: Unable to load toolkit 'OpenEye Toolkit'. The Open Force Field Toolkit does not require the OpenEye Toolkits, and can use RDKit/AmberTools instead. However, if you have a valid license for the OpenEye Toolkits, consider installing them for faster performance and additional file format support: https://docs.eyesopen.com/toolkits/python/quickstart-python/linuxosx.html OpenEye offers free Toolkit licenses for academics: https://www.eyesopen.com/academic-licensing
+Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
+/home/yu-tang/anaconda3/envs/OpenFFCrystal/lib/python3.8/site-packages/pymatgen/core/__init__.py:49: UserWarning: Error loading .pmgrc.yaml: [Errno 2] No such file or directory: '/home/yu-tang/.pmgrc.yaml'. You may need to reconfigure your yaml file.
+  warnings.warn(f"Error loading .pmgrc.yaml: {ex}. You may need to reconfigure your yaml file.")
+4020664
+Initial Energy -7328.315187662351 kJ/mol
+Minimizing Energy!
+Initial box vector
+ [[ 2.5458      0.          0.        ]
+ [-1.05239537  2.34935831  0.        ]
+ [-0.51478317 -0.64814335  2.45755869]]
+Initial box parameter
+ [  2.5458   2.5743   2.5932  98.45   101.45   114.13  ]
+result [ -0.14879334   0.75281712   0.33297535 ...  98.45       101.45
+ 114.13      ]
+Final Energy = -9248.361740448816 kJ/mol
+2100147
+Initial Energy -20825.45895990279 kJ/mol
+Minimizing Energy!
+Initial box vector
+ [[ 2.8375      0.          0.        ]
+ [ 0.          2.538       0.        ]
+ [-1.16047449  0.          3.60796327]]
+Initial box parameter
+ [  2.8375   2.538    3.79    90.     107.83    90.    ]
+result [  0.1589115    0.33016406   0.75699307 ...  90.         107.83
+  90.        ]
+Final Energy = -23428.853414362624 kJ/mol
+2237525
+Initial Energy 6055.211248311156 kJ/mol
+Minimizing Energy!
+Initial box vector
+ [[ 2.4222      0.          0.        ]
+ [ 0.          4.6692      0.        ]
+ [-0.4242995   0.          3.22722713]]
+Initial box parameter
+ [ 2.4222  4.6692  3.255  90.     97.49   90.    ]
+7216997
+Initial Energy 63084.52990273882 kJ/mol
+Minimizing Energy!
+Initial box vector
+ [[ 2.7702      0.          0.        ]
+ [ 0.          2.9967      0.        ]
+ [-0.65180787  0.          4.41403422]]
+Initial box parameter
+ [ 2.7702  2.9967  4.4619 90.     98.4    90.    ]
+result [ 0.17765139  0.50258482  0.29984398 ... 90.         98.4
+ 90.        ]
+Final Energy = 53708.512684583126 kJ/mol
+2235036
+Initial Energy 4026.4217724080954 kJ/mol
+Minimizing Energy!
+Initial box vector
+ [[ 3.0564      0.          0.        ]
+ [-0.17458181  3.06503201  0.        ]
+ [-0.1039779  -1.42500828  3.97671163]]
+Initial box parameter
+ [  3.0564   3.07     4.2256 109.59    91.41    93.26  ]
+result [3.96710762e-02 1.62246024e-01 3.13810222e-01 ... 1.09590000e+02
+ 9.14100000e+01 9.32600000e+01]
+Final Energy = -729.1096230480216 kJ/mol
+3500018
+Initial Energy 5367.795299301262 kJ/mol
+Minimizing Energy!
+Initial box vector
+ [[ 3.0136      0.          0.        ]
+ [ 0.          2.7727      0.        ]
+ [-0.37116416  0.          6.68059728]]
+Initial box parameter
+ [ 3.0136  2.7727  6.6909 90.     93.18   90.    ]
+result [ 2.26312398e-01  3.65445725e-01 -7.76590606e-02 ...  9.00000000e+01
+  9.31800000e+01  9.00000000e+01]
+Final Energy = 2015.864176247731 kJ/mol

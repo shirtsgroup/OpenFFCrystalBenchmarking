@@ -12,9 +12,10 @@ for f in os.listdir('data/PDB'):
     except Exception as e:
         print(e)
         continue
-    a_mult = math.ceil(20.0/mol.unitcell.GetA())
-    b_mult = math.ceil(20.0/mol.unitcell.GetB())
-    c_mult = math.ceil(20.0/mol.unitcell.GetC())
+    # Extract cell length
+    a_mult = math.ceil(24.0/mol.unitcell.GetA())
+    b_mult = math.ceil(24.0/mol.unitcell.GetB())
+    c_mult = math.ceil(24.0/mol.unitcell.GetC())
     # add one extra cell in the smallest direction
     if a_mult < b_mult and a_mult < c_mult:
         a_mult = a_mult + 1
@@ -31,7 +32,7 @@ for f in os.listdir('data/PDB'):
     pymol.cmd.do('supercell %s,%s,%s,%s' % (a_mult, b_mult, c_mult, id))
     pymol.cmd.delete(id)
     # Make the supercell file if needed
-    path = '/home/qualenal/Scripts/OpenFFCrystalBenchmarking/data/PDB_supercell/'+id+'_supercell.pdb'
+    path = './data/PDB_supercell/'+id+'_supercell.pdb'
     try:
         os.mknod(path)
     except FileExistsError:
