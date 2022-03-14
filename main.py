@@ -126,18 +126,7 @@ def para2matrix(cell_para, radians=False, format="lower"):
         #pass
     return matrix
 
-'''
-    # Merge to 3x3 matrix and convert to box parameter
-    matrix = np.vstack((a,b,c))
-    box_parameter = matrix2para(matrix, radians=False)
-    print("box parameter")
-    print(box_parameter)
 
-    # replace back to 3x3 box vector
-    box_vector = para2matrix(box_parameter, radians=False, format="lower")
-    print("box vector")
-    print(box_vector)
-'''
 def box_energy(x,*args):
     # x is np array of 3*n(atoms) positional coordinates and 6 triclinical box parameters
     # Return the energy of the system (in kJ/mol)
@@ -158,11 +147,11 @@ def box_energy(x,*args):
     b = np.array([box_vector[1][0],box_vector[1][1],0])
     c = np.array([box_vector[2][0],box_vector[2][1],box_vector[2][2]])
     '''
-    #print("-------------------")
-    #print("periodic box vectors")
-    #print(a)
-    #print(b)
-    #print(c)
+    print("-------------------")
+    print("periodic box vectors")
+    print(a)
+    print(b)
+    print(c)
     '''
     # Set Context with positions and periodic boundary conditions
     context.setPositions(positions_arr)
@@ -170,6 +159,8 @@ def box_energy(x,*args):
     # Return Energy
     energy = context.getState(getEnergy=True).getPotentialEnergy().value_in_unit(unit.kilojoule_per_mole)
     return energy
+
+grad_temp_func = []
 
 def jacobian(x,*args):
     # x is np array of 3*n(atoms) positional coordinates and 6 triclinical box parameters
@@ -187,79 +178,39 @@ def jacobian(x,*args):
         positions_arr[i][:] = x[i*3:i*3+3]
     context.setPositions(positions_arr)
 
-    # epsilon change is 1% of box parameter or box parameter
-    epsilon = 1e-2
-
     # convert box parameter to box vector for atom fractional position
     box_parameter = [x[n * 3], x[n * 3 + 1], x[n * 3 + 2], x[n * 3 + 3], x[n * 3 + 4], x[n * 3 + 5]]
     box_vectors = para2matrix(box_parameter, radians=False, format="lower")
     frac_positions = np.matmul(np.linalg.inv(box_vectors), positions_arr.T).T
 
-    # A
-    temp_a = x[n * 3] + epsilon * x[n * 3]
-    #print("temp_a", temp_a)
-    temp_box_parameters = np.array([temp_a, x[n * 3 + 1], x[n * 3 + 2], x[n * 3 + 3], x[n * 3 + 4], x[n * 3 + 5]])  # Replace appropriate entry in box parameter
-    temp_box_vectors = para2matrix(temp_box_parameters, radians=False,format="lower")  # convert box parameter to box vector for atom fractional position
-    new_positions = np.matmul(temp_box_vectors, frac_positions.T).T  # Transform frac coordiantes with new box vectors
-    temp_x = np.concatenate((new_positions.flatten(), [temp_a], x[n * 3 + 1:n * 3 + 6]))  # build x array to feed to box_energy function with new box parameter
-    new_energy = box_energy(temp_x, context, n)  # compute new energy
-    grad_temp = (new_energy - energy) / epsilon * x[n * 3]  # compute gradient
-    jac = np.append(jac, grad_temp)  # append to jac
+    # A, B, C, alpha, beta, gamma
+    for i in range(len(box_parameter)):
+        # use different epsilon for A, B, C and alpha, beta, gamma
+        if i < 3:
+            epsilon = 1e-4
+        else:
+            epsilon = 1e-6
 
-    # B
-    temp_b = x[n * 3 + 1] + epsilon * x[n * 3 + 1]
-    #print("temp_b", temp_b)
-    temp_box_parameters = np.array([x[n * 3], temp_b, x[n * 3 + 2], x[n * 3 + 3], x[n * 3 + 4], x[n * 3 + 5]])
-    temp_box_vectors = para2matrix(temp_box_parameters, radians=False, format="lower")
-    new_positions = np.matmul(temp_box_vectors, frac_positions.T).T
-    temp_x = np.concatenate((new_positions.flatten(), [x[n * 3]], [temp_b], x[n * 3 + 2:n * 3 + 6]))
-    new_energy = box_energy(temp_x, context, n)
-    grad_temp = (new_energy - energy) / epsilon * x[n * 3 + 1]
-    jac = np.append(jac, grad_temp)
+        temp_U = x[n * 3 + i] + epsilon * x[n * 3 + i]
+        temp_L = x[n * 3 + i] - epsilon * x[n * 3 + i]
+        dstep = temp_U - temp_L
+        temp_box_parameters = np.array([x[n * 3], x[n * 3 + 1], x[n * 3 + 2], x[n * 3 + 3], x[n * 3 + 4], x[n * 3 + 5]])
+        temp_box_parameters[i] = temp_U # Replace appropriate entry in box parameter
+        temp_box_vectors = para2matrix(temp_box_parameters, radians=False, format="lower") # convert box parameter to box vector for atom fractional position
+        new_positions = np.matmul(temp_box_vectors, frac_positions.T).T # Transform frac coordiantes with new box vectors
+        temp_x = np.concatenate((new_positions.flatten(), temp_box_parameters.flatten()))
+        new_energy = box_energy(temp_x, context, n)  # compute new energy
+        grad_temp = (new_energy - energy) / dstep # compute gradient
+        jac = np.append(jac, grad_temp)  # append to jac
 
-    # C
-    temp_c = x[n * 3 + 2] + epsilon * x[n * 3 + 2]
-    #print("temp_b_y", temp_c)
-    temp_box_parameters = np.array([x[n * 3], x[n * 3 + 1], temp_c, x[n * 3 + 3], x[n * 3 + 4], x[n * 3 + 5]])
-    temp_box_vectors = para2matrix(temp_box_parameters, radians=False, format="lower")
-    new_positions = np.matmul(temp_box_vectors, frac_positions.T).T
-    temp_x = np.concatenate((new_positions.flatten(), x[n * 3:n * 3 + 2], [temp_c], x[n * 3 + 3:n * 3 + 6]))
-    new_energy = box_energy(temp_x, context, n)
-    grad_temp = (new_energy - energy) / epsilon * x[n * 3 + 2]
-    jac = np.append(jac, grad_temp)
-
-    # alpha
-    temp_alpha = x[n * 3 + 3] + epsilon * x[n * 3 + 3]
-    #print("temp_alpha", temp_alpha)
-    temp_box_parameters = np.array([x[n * 3], x[n * 3 + 1], x[n * 3 + 2], temp_alpha, x[n * 3 + 4], x[n * 3 + 5]])
-    temp_box_vectors = para2matrix(temp_box_parameters, radians=False, format="lower")
-    new_positions = np.matmul(temp_box_vectors, frac_positions.T).T
-    temp_x = np.concatenate((new_positions.flatten(), x[n * 3:n * 3 + 3], [temp_alpha], x[n * 3 + 4:n * 3 + 6]))
-    new_energy = box_energy(temp_x, context, n)
-    grad_temp = (new_energy - energy) / epsilon * x[n * 3 + 3]
-    jac = np.append(jac, grad_temp)
-
-    # beta
-    temp_beta = x[n * 3 + 4] + epsilon * x[n * 3 + 4]
-    #print("temp_beta", temp_beta)
-    temp_box_parameters = np.array([x[n * 3], x[n * 3 + 1], x[n * 3 + 2], x[n * 3 + 3], temp_beta, x[n * 3 + 5]])
-    temp_box_vectors = para2matrix(temp_box_parameters, radians=False, format="lower")
-    new_positions = np.matmul(temp_box_vectors, frac_positions.T).T
-    temp_x = np.concatenate((new_positions.flatten(), x[n * 3:n * 3 + 4], [temp_beta], [x[n * 3 + 5]]))
-    new_energy = box_energy(temp_x, context, n)
-    grad_temp = (new_energy - energy) / epsilon * x[n * 3 + 4]
-    jac = np.append(jac, grad_temp)
-
-    # gamma
-    temp_gamma = x[n * 3 + 5] + epsilon * x[n * 3 + 5]
-    #print("temp_gamma", temp_gamma)
-    temp_box_parameters = np.array([x[n * 3], x[n * 3 + 1], x[n * 3 + 2], x[n * 3 + 3], x[n * 3 + 4], temp_gamma])
-    temp_box_vectors = para2matrix(temp_box_parameters, radians=False, format="lower")
-    new_positions = np.matmul(temp_box_vectors, frac_positions.T).T
-    temp_x = np.concatenate((new_positions.flatten(), x[n * 3:n * 3 + 5], [temp_gamma]))
-    new_energy = box_energy(temp_x, context, n)
-    grad_temp = (new_energy - energy) / epsilon * x[n * 3 + 5]
-    jac = np.append(jac, grad_temp)
+        # grad_temp vs iteration
+        grad_temp_func.append(grad_temp)
+        plt.plot(grad_temp_func)
+        plt.ylabel('grad_temp_func', fontsize=14)
+        plt.xlabel('iteration', fontsize=14)
+        plt.title('grad_temp vs iteration', fontsize=15)
+        plt.ylim(-10000, 10000)
+        plt.show()
 
     #print("new_energy", new_energy)
     #print("grad_temp", grad_temp)
@@ -355,6 +306,7 @@ for pdb in os.listdir('data/PDB'):
     constraints = cons
     '''
 
+    '''
     loss_func = []
     def callback(x):
         fobj = box_energy(x,simulation.context, n)
@@ -365,9 +317,23 @@ for pdb in os.listdir('data/PDB'):
         plt.xlabel('iteration', fontsize=14)
         plt.title('loss_func vs iteration', fontsize=15)
         plt.show()
+        callback=callback,
+    '''
+
+    '''
+    bounds = []
+    # atom position no limit
+    for i in range(n * 3):
+        bounds.append((None, None))
+    # box parameter > 0
+    for i in range(len(box_parameter)):
+        bounds.append((0, None))
+    bounds=bounds
+    '''
 
     # run minimizer
-    result = minimize(box_energy, x, (simulation.context, n), method='L-BFGS-B', jac=jacobian, callback=callback, options={'maxiter': 100, 'disp':1})
+    result = minimize(box_energy, x, (simulation.context, n), method='L-BFGS-B', jac=jacobian, options={'maxiter': 100, 'disp': 1, 'eps': 1e-8})
+
     # print(history)
     print("---------------------------------------------------------------------------------------------")
 
@@ -379,16 +345,6 @@ for pdb in os.listdir('data/PDB'):
         positions_arr[i][:] = x_new[i * 3:i * 3 + 3]
     simulation.context.setPositions(positions_arr)
 
-    '''
-    # convert box parameter to box vector
-    box_vector = para2matrix(box_parameter, radians=False, format="lower")
-
-    # Build periodic box vectors
-    a = np.array([box_vector[0][0],0,0])
-    b = np.array([box_vector[1][0],box_vector[1][1],0])
-    c = np.array([box_vector[2][0],box_vector[2][1],box_vector[2][2]])
-    print("-------------------")
-    '''
     # convert result to box vector
     box_parameter_new = [x_new[n * 3], x_new[n * 3 + 1], x_new[n * 3 + 2], x_new[n * 3 + 3], x_new[n * 3 + 4], x_new[n * 3 + 5]]
     box_vectors_new = para2matrix(box_parameter_new, radians=False, format="lower")
