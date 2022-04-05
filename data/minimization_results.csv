@@ -1,6 +1,6 @@
-,COD ID,RMSD,Original Energy,Minimized Energy (OpenMM),Minimized Energy (Cell Minimization),Original Box Vectors,Minimized Box Vectors,Original Box parameters,Minimized Box parameter
-0,2100147,[1.086277],-20825.45895990279 kJ/mol,-23428.853414362624 kJ/mol,-40234.511036083546 kJ/mol,"[[ 2.8375      0.          0.        ]
+,COD ID,RMSD,Original Energy,Minimized Energy (OpenMM),Minimized Energy (Cell Minimization),Original Box Vectors,Minimized Box Vectors,Original Box parameters,Minimized Box parameter,Box parameter - Last five gradient,Gradient A,Gradient B,Gradient C,Gradient alpha,Gradient beta,Gradient gamma,Atom position - Last five gradient,Gradient reduced positions (x0),Gradient reduced positions (y0),Gradient reduced positions (z0),Gradient reduced positions (x100),Gradient reduced positions (y100),Gradient reduced positions (z100),Gradient reduced positions (x200),Gradient reduced positions (y200),Gradient reduced positions (z200)
+0,2100147,[1.0794642],-20825.45895990279 kJ/mol,-23428.853414362624 kJ/mol,-23428.853414362624 kJ/mol,"[[ 2.8375      0.          0.        ]
  [ 0.          2.538       0.        ]
- [-1.16047449  0.          3.60796327]]","[[ 2.85330790e+00  0.00000000e+00  0.00000000e+00]
- [ 9.06339818e-04  2.69946631e+00  0.00000000e+00]
- [-1.21177644e+00  3.30351146e-04  3.76562215e+00]]",[  2.8375   2.538    3.79    90.     107.83    90.    ],"[2.8533079046907583, 2.6994664637315284, 3.9557947923908396, 90.00110802833937, 107.83816465644095, 89.98076307002849]"
+ [-1.16047449  0.          3.60796327]]","[[ 2.83750000e+00  0.00000000e+00  0.00000000e+00]
+ [ 1.55407679e-16  2.53800000e+00  0.00000000e+00]
+ [-1.16047449e+00  3.03129137e-16  3.60796327e+00]]",[  2.8375   2.538    3.79    90.     107.83    90.    ],"[2.837500000000001, 2.5380000000000007, 3.790000000000001, 90.0, 107.82999999999998, 90.0]", ,[-228.48248011121902],[-3421.2953783217563],[1395.5480658931],[-0.08027357883583193],[-197.9035480829274],[131.94342041544678], ,[-9.043903940154715],[-14.210633729070503],[-0.5699534544239763],[4.099277710168398],[-32.52578669829445],[-63.38664885869594],[139.50700401941646],[-142.43719566531712],[-71.53354244766555]
