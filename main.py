@@ -146,13 +146,13 @@ def box_energy(x,*args):
     a = np.array([box_vector[0][0],0,0])
     b = np.array([box_vector[1][0],box_vector[1][1],0])
     c = np.array([box_vector[2][0],box_vector[2][1],box_vector[2][2]])
-    '''
+
     print("-------------------")
     print("periodic box vectors")
     print(a)
     print(b)
     print(c)
-    '''
+
     # Set Context with positions and periodic boundary conditions
     context.setPositions(positions_arr)
     context.setPeriodicBoxVectors(a,b,c)
@@ -161,6 +161,20 @@ def box_energy(x,*args):
     return energy
 
 grad_temp_func = []
+
+grad_temp_func0 = []
+grad_temp_func1 = []
+grad_temp_func2 = []
+grad_temp_func3 = []
+grad_temp_func4 = []
+grad_temp_func5 = []
+value_0 = []
+value_1 = []
+value_2 = []
+value_3 = []
+value_4 = []
+value_5 = []
+
 
 def jacobian(x,*args):
     # x is np array of 3*n(atoms) positional coordinates and 6 triclinical box parameters
@@ -187,34 +201,73 @@ def jacobian(x,*args):
     for i in range(len(box_parameter)):
         # use different epsilon for A, B, C and alpha, beta, gamma
         if i < 3:
-            epsilon = 1e-4
+            epsilon = 1e-3
         else:
-            epsilon = 1e-6
+            epsilon = 1e-3
 
         temp_U = x[n * 3 + i] + epsilon * x[n * 3 + i]
         temp_L = x[n * 3 + i] - epsilon * x[n * 3 + i]
         dstep = temp_U - temp_L
+
         temp_box_parameters = np.array([x[n * 3], x[n * 3 + 1], x[n * 3 + 2], x[n * 3 + 3], x[n * 3 + 4], x[n * 3 + 5]])
         temp_box_parameters[i] = temp_U # Replace appropriate entry in box parameter
         temp_box_vectors = para2matrix(temp_box_parameters, radians=False, format="lower") # convert box parameter to box vector for atom fractional position
         new_positions = np.matmul(temp_box_vectors, frac_positions.T).T # Transform frac coordiantes with new box vectors
         temp_x = np.concatenate((new_positions.flatten(), temp_box_parameters.flatten()))
-        new_energy = box_energy(temp_x, context, n)  # compute new energy
-        grad_temp = (new_energy - energy) / dstep # compute gradient
+        energy_U = box_energy(temp_x, context, n)  # compute new energy
+
+        temp_box_parameters = np.array([x[n * 3], x[n * 3 + 1], x[n * 3 + 2], x[n * 3 + 3], x[n * 3 + 4], x[n * 3 + 5]])
+        temp_box_parameters[i] = temp_L # Replace appropriate entry in box parameter
+        temp_box_vectors = para2matrix(temp_box_parameters, radians=False, format="lower") # convert box parameter to box vector for atom fractional position
+        new_positions = np.matmul(temp_box_vectors, frac_positions.T).T # Transform frac coordiantes with new box vectors
+        temp_x = np.concatenate((new_positions.flatten(), temp_box_parameters.flatten()))
+        energy_L = box_energy(temp_x, context, n)  # compute new energy
+
+        grad_temp = (energy_U - energy_L) / dstep # compute gradient
+
         jac = np.append(jac, grad_temp)  # append to jac
+        grad_temp_func.append(grad_temp)
+        '''
+        plt.ylim(-10000, 10000)
+        plt.plot(grad_temp_func, color='b')
+        plt.ylabel('grad_temp_func', fontsize=12)
+        plt.xlabel('iteration', fontsize=12)
+        plt.title('grad_temp vs iteration', fontsize=15)
+        plt.tight_layout()
+        '''
 
         # grad_temp vs iteration
-        grad_temp_func.append(grad_temp)
-        plt.plot(grad_temp_func)
-        plt.ylabel('grad_temp_func', fontsize=14)
-        plt.xlabel('iteration', fontsize=14)
-        plt.title('grad_temp vs iteration', fontsize=15)
-        plt.ylim(-10000, 10000)
-        plt.show()
+        if i == 0:
+            grad_temp_func0.append(grad_temp)
+            value_0.append(x[n * 3 + i])
+        elif i == 1:
+            grad_temp_func1.append(grad_temp)
+            value_1.append(x[n * 3 + i])
+        elif i == 2:
+            grad_temp_func2.append(grad_temp)
+            value_2.append(x[n * 3 + i])
+        elif i == 3:
+            grad_temp_func3.append(grad_temp)
+            value_3.append(x[n * 3 + i])
+        elif i == 4:
+            grad_temp_func4.append(grad_temp)
+            value_4.append(x[n * 3 + i])
+        elif i == 5:
+            grad_temp_func5.append(grad_temp)
+            value_5.append(x[n * 3 + i])
+    '''
+    plt.tight_layout()
+    plt.ylim(-10000, 10000)
+    plt.ylabel('gradient', fontsize=14)
+    plt.xlabel('iteration', fontsize=14)
 
-    #print("new_energy", new_energy)
-    #print("grad_temp", grad_temp)
+    plt.title('gradient vs iteration', fontsize=15)
+    plt.plot(grad_temp_func0)
 
+    # plt.title('parameter vs iteration', fontsize=15)
+    #plt.plot(alpha)
+    plt.show()
+    '''
     return jac
 
 
@@ -239,7 +292,7 @@ for pdb in os.listdir('data/PDB'):
     # load pdb with one copy of pdb file
     cod_id = pdb.split('.')[0]
     print(cod_id)
-#there is try here
+#    try:
     try:
         # get smiles from all_smilies
         smiles_string = smiles.loc[smiles['COD ID'] == int(cod_id)]['SMILES'].values[0]
@@ -274,7 +327,7 @@ for pdb in os.listdir('data/PDB'):
     simulation.context.setPositions(positions)
 
     # set reporters
-    pdb_reporter = openmm.app.PDBReporter('data/minimized_PDB_supercell/' + cod_id + '.pdb', 1)
+    pdb_reporter = openmm.app.PDBReporter('data/minimized_PDB_supercell/' + "2100147" + '.pdb', 1)
     simulation.reporters.append(pdb_reporter)
     # set positions
     simulation.context.setPositions(positions)
@@ -299,12 +352,6 @@ for pdb in os.listdir('data/PDB'):
     print("Initial box parameter\n", box_parameter)
     x = np.append(numpy_positions.flatten(), [box_parameter[0], box_parameter[1], box_parameter[2], box_parameter[3], box_parameter[4], box_parameter[5]])
     n = len(numpy_positions)
-    '''
-    cons = [{'type': 'ineq', 'fun': lambda x: x[n * 3] - 2 * x[n * 3 + 1]},
-            {'type': 'ineq', 'fun': lambda x: x[n * 3] - 2 * x[n * 3 + 3]},
-            {'type': 'ineq', 'fun': lambda x: x[n * 3 + 2] - 2 * x[n * 3 + 4]}]
-    constraints = cons
-    '''
 
     '''
     loss_func = []
@@ -328,11 +375,41 @@ for pdb in os.listdir('data/PDB'):
     # box parameter > 0
     for i in range(len(box_parameter)):
         bounds.append((0, None))
-    bounds=bounds
     '''
 
+
+    '''
+    cons = [{'type': 'ineq', 'fun': lambda x: x[n * 3] - 2 * x[n * 3 + 1]},
+            {'type': 'ineq', 'fun': lambda x: x[n * 3] - 2 * x[n * 3 + 3]},
+            {'type': 'ineq', 'fun': lambda x: x[n * 3 + 2] - 2 * x[n * 3 + 4]}]
+    constraints = cons
+    '''
+
+
+    def constraint1(x):
+        box_parameter = [x[n * 3], x[n * 3 + 1], x[n * 3 + 2], x[n * 3 + 3], x[n * 3 + 4], x[n * 3 + 5]]
+        box_vector = para2matrix(box_parameter, radians=False, format="lower")
+        box_vector.flatten()
+        value = box_vector[0][0]- 2 * abs(box_vector[1][0])
+        return value
+    def constraint2(x):
+        box_parameter = [x[n * 3], x[n * 3 + 1], x[n * 3 + 2], x[n * 3 + 3], x[n * 3 + 4], x[n * 3 + 5]]
+        box_vector = para2matrix(box_parameter, radians=False, format="lower")
+        value = box_vector[0][0]- 2 * abs(box_vector[2][0])
+        return value
+    def constraint3(x):
+        box_parameter = [x[n * 3], x[n * 3 + 1], x[n * 3 + 2], x[n * 3 + 3], x[n * 3 + 4], x[n * 3 + 5]]
+        box_vector = para2matrix(box_parameter, radians=False, format="lower")
+        value = box_vector[1][1]- 2 * abs(box_vector[2][1])
+        return value
+
+    con1 = {'type': 'ineq', 'fun': constraint1}
+    con2 = {'type': 'ineq', 'fun': constraint2}
+    con3 = {'type': 'ineq', 'fun': constraint3}
+    cons = ([con1, con2, con3])
+
     # run minimizer
-    result = minimize(box_energy, x, (simulation.context, n), method='L-BFGS-B', jac=jacobian, options={'maxiter': 100, 'disp': 1, 'eps': 1e-8})
+    result = minimize(box_energy, x, (simulation.context, n), method='trust-constr', constraints=cons, jac=jacobian, options={'disp': 1})
 
     # print(history)
     print("---------------------------------------------------------------------------------------------")
@@ -378,12 +455,111 @@ for pdb in os.listdir('data/PDB'):
         })
     with open('data/rmsd_values.txt', 'a') as f:
         f.write('%s\t%s\n' % (cod_id, rmsd[0]))
-#except Exception as e:
-#    logging.error('Generic error with ID %s' % cod_id)
-#    logging.error(e)
-#    continue
+#    except Exception as e:
+#        logging.error('Generic error with ID %s' % cod_id)
+#        logging.error(e)
+#        continue
 
 
+    plt.ylim(-10000, 10000)
+    plt.ylabel('gradient', fontsize=14)
+    plt.xlabel('iteration', fontsize=14)
+    plt.title('gradient(A) vs iteration', fontsize=15)
+    plt.plot(grad_temp_func0)
+    plt.tight_layout()
+    plt.savefig('./figure/A_gradient.jpg')
+    plt.clf()
+    plt.ylabel('parameter', fontsize=14)
+    plt.xlabel('iteration', fontsize=14)
+    plt.title('parameter(A) vs iteration', fontsize=15)
+    plt.plot(value_0)
+    plt.tight_layout()
+    plt.savefig('./figure/A.jpg')
+    plt.clf()
+
+
+    plt.ylim(-10000, 10000)
+    plt.ylabel('gradient', fontsize=14)
+    plt.xlabel('iteration', fontsize=14)
+    plt.title('gradient(B) vs iteration', fontsize=15)
+    plt.plot(grad_temp_func1)
+    plt.tight_layout()
+    plt.savefig('./figure/B_gradient.jpg')
+    plt.clf()
+    plt.ylabel('parameter', fontsize=14)
+    plt.xlabel('iteration', fontsize=14)
+    plt.title('parameter(B) vs iteration', fontsize=15)
+    plt.plot(value_1)
+    plt.tight_layout()
+    plt.savefig('./figure/B.jpg')
+    plt.clf()
+
+    plt.ylim(-10000, 10000)
+    plt.ylabel('gradient', fontsize=14)
+    plt.xlabel('iteration', fontsize=14)
+    plt.title('gradient(C) vs iteration', fontsize=15)
+    plt.plot(grad_temp_func2)
+    plt.tight_layout()
+    plt.savefig('./figure/C_gradient.jpg')
+    plt.clf()
+    plt.ylabel('parameter', fontsize=14)
+    plt.xlabel('iteration', fontsize=14)
+    plt.title('parameter(C) vs iteration', fontsize=15)
+    plt.plot(value_2)
+    plt.tight_layout()
+    plt.savefig('./figure/C.jpg')
+    plt.clf()
+
+
+    plt.ylim(-10000, 10000)
+    plt.ylabel('gradient', fontsize=14)
+    plt.xlabel('iteration', fontsize=14)
+    plt.title('gradient(alpha) vs iteration', fontsize=15)
+    plt.plot(grad_temp_func3)
+    plt.tight_layout()
+    plt.savefig('./figure/alpha_gradient.jpg')
+    plt.clf()
+    plt.ylabel('parameter', fontsize=14)
+    plt.xlabel('iteration', fontsize=14)
+    plt.title('parameter(alpha) vs iteration', fontsize=15)
+    plt.plot(value_3)
+    plt.tight_layout()
+    plt.savefig('./figure/alpha.jpg')
+    plt.clf()
+
+    plt.tight_layout()
+    plt.ylim(-10000, 10000)
+    plt.ylabel('gradient', fontsize=14)
+    plt.xlabel('iteration', fontsize=14)
+    plt.title('gradient(beta) vs iteration', fontsize=15)
+    plt.plot(grad_temp_func4)
+    plt.savefig('./figure/beta_gradient.jpg')
+    plt.clf()
+    plt.ylabel('parameter', fontsize=14)
+    plt.xlabel('iteration', fontsize=14)
+    plt.title('parameter(beta) vs iteration', fontsize=15)
+    plt.plot(value_4)
+    plt.savefig('./figure/beta.jpg')
+    plt.clf()
+
+    plt.tight_layout()
+    plt.ylim(-10000, 10000)
+    plt.ylabel('gradient', fontsize=14)
+    plt.xlabel('iteration', fontsize=14)
+    plt.title('gradient(gamma) vs iteration', fontsize=15)
+    plt.plot(grad_temp_func5)
+    plt.tight_layout()
+    plt.savefig('./figure/gamma_gradient.jpg')
+    plt.clf()
+    plt.ylabel('parameter', fontsize=14)
+    plt.xlabel('iteration', fontsize=14)
+    plt.title('parameter(gamma) vs iteration', fontsize=15)
+    plt.plot(value_5)
+    plt.tight_layout()
+    plt.savefig('./figure/gamma.jpg')
+    plt.clf()
+
+    plt.show()
 
 try:
     d = pd.DataFrame(data)
