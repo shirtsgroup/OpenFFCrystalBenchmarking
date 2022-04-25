@@ -19,7 +19,7 @@ import csv
 from pyxtal.operations import angle, create_matrix
 from pyxtal.constants import deg, rad, ltype_keywords
 import matplotlib.pyplot as plt
-import cProfile, pstats
+
 
 # Functions to minimize energy with respect to box parameter
 # forces provide 3*n derivatives of energy
@@ -149,7 +149,7 @@ def box_energy(x,*args):
     b = np.array([box_vectors[1][0],box_vectors[1][1],0])
     c = np.array([box_vectors[2][0],box_vectors[2][1],box_vectors[2][2]])
     # (TEST) print to monitor the result
-    print("-------------------")
+    #print("-------------------")
     print("periodic box vectors")
     print(a)
     print(b)
@@ -195,7 +195,7 @@ def jacobian(x,*args):
     # for positions, return given forces
     context = args[0]
     n = args[1]
-    energy = context.getState(getEnergy=True).getPotentialEnergy().value_in_unit(unit.kilojoule_per_mole)
+    # energy = context.getState(getEnergy=True).getPotentialEnergy().value_in_unit(unit.kilojoule_per_mole)
     forces = -1*context.getState(getForces=True).getForces(asNumpy=True).value_in_unit(unit.kilojoule_per_mole/(unit.nano*unit.meter))
     jac = forces.flatten()
 
@@ -228,11 +228,7 @@ def jacobian(x,*args):
     # A, B, C, alpha, beta, gamma
     for i in range(len(box_parameter)):
         # use different epsilon for A, B, C and alpha, beta, gamma
-        if i < 3:
-            epsilon = 1e-6
-        else:
-            epsilon = 1e-6
-
+        epsilon = 1e-6
         temp_U = x[n * 3 + i] + epsilon * x[n * 3 + i]
         temp_L = x[n * 3 + i] - epsilon * x[n * 3 + i]
         dstep = temp_U - temp_L
@@ -303,163 +299,174 @@ for pdb in os.listdir('data/PDB'):
     # load pdb with one copy of pdb file
     cod_id = pdb.split('.')[0]
     print(cod_id)
-#    try:
     try:
-        # get smiles from all_smilies
-        smiles_string = smiles.loc[smiles['COD ID'] == int(cod_id)]['SMILES'].values[0]
-        off_mol = Molecule.from_pdb_and_smiles('data/PDB/' + pdb, smiles_string)
+        try:
+            # get smiles from all_smilies
+            smiles_string = smiles.loc[smiles['COD ID'] == int(cod_id)]['SMILES'].values[0]
+            off_mol = Molecule.from_pdb_and_smiles('data/PDB/' + pdb, smiles_string)
+        except Exception as e:
+            logging.error('PDB/SMILES error with ID %s' % cod_id)
+            logging.error(e)
+            continue
+        try:
+            # load supercell pdb file (2x2x2) into topology
+            # replace cod_id to
+            pdb_file = PDBFile('data/PDB_supercell/' + cod_id + '_supercell.pdb')
+            off_top = Topology.from_openmm(pdb_file.topology, [off_mol])
+        except Exception as e:
+            logging.error('Topology error with ID %s' % cod_id)
+            logging.error(e)
+            continue
+        # Create MD simulation inputs
+        system = forcefield.create_openmm_system(off_top)
+        integrator = openmm.VerletIntegrator(1 * unit.femtoseconds)
+        platform = openmm.Platform.getPlatformByName('CUDA')
+
+        try:
+            # create simulation, catch errors
+            simulation = openmm.app.Simulation(pdb_file.topology, system, integrator, platform)
+        except Exception as e:
+            logging.error('Simulation Build error with ID %s' % cod_id)
+            logging.error(e)
+            continue
+        # set initial positions from pdbfile
+        positions = pdb_file.getPositions()
+        simulation.context.setPositions(positions)
+
+        # set reporters
+        pdb_reporter = openmm.app.PDBReporter('data/minimized_PDB_supercell/' + cod_id + '.pdb', 1)
+        simulation.reporters.append(pdb_reporter)
+        # set positions
+        simulation.context.setPositions(positions)
+        # save state and print initial PE
+        simulation.saveState('data/initial_states/' + cod_id + '_initial.xml')
+        orig_potential = simulation.context.getState(getEnergy=True).getPotentialEnergy()
+        if orig_potential.value_in_unit(unit.kilojoule_per_mole) > 1e24:
+            # Skip if the initial energy evaluation is infeasibly high
+            continue
+        print('Initial Energy ' + str(orig_potential))
+        # Minimize Energy and save final state
+        print('Minimizing Energy!')
+        simulation.minimizeEnergy(maxIterations=100000)  # Perform initial minimization with openMM minimizer
+        mid_potential = simulation.context.getState(getEnergy=True).getPotentialEnergy()
+        # build x array to feed to minimizer
+        box_vectors = pdb_file.topology.getPeriodicBoxVectors()
+        A = np.array(box_vectors.value_in_unit(unit.nano * unit.meter))
+        numpy_positions = simulation.context.getState(getPositions=True).getPositions(asNumpy=True)
+        print("Initial box vector\n", A)
+        # convert box vector to box parameter
+        box_parameter = matrix2para(A, radians=False)
+        print("Initial box parameter\n", box_parameter)
+        box_vectors = para2matrix(box_parameter, radians=False, format="lower")
+        # convert atom position to fractional position
+        frac_positions_arr = np.matmul(np.linalg.inv(box_vectors), numpy_positions.T).T
+        x = np.append(frac_positions_arr.flatten(), [box_parameter[0], box_parameter[1], box_parameter[2], box_parameter[3], box_parameter[4], box_parameter[5]])
+        n = len(frac_positions_arr)
+
+
+        # constraint for minimizer
+        def constraint1(x):
+            box_parameter = [x[n * 3], x[n * 3 + 1], x[n * 3 + 2], x[n * 3 + 3], x[n * 3 + 4], x[n * 3 + 5]]
+            box_vector = para2matrix(box_parameter, radians=False, format="lower")
+            box_vector.flatten()
+            value = box_vector[0][0] - 2 * abs(box_vector[1][0])
+            return value
+        def constraint2(x):
+            box_parameter = [x[n * 3], x[n * 3 + 1], x[n * 3 + 2], x[n * 3 + 3], x[n * 3 + 4], x[n * 3 + 5]]
+            box_vector = para2matrix(box_parameter, radians=False, format="lower")
+            value = box_vector[0][0] - 2 * abs(box_vector[2][0])
+            return value
+        def constraint3(x):
+            box_parameter = [x[n * 3], x[n * 3 + 1], x[n * 3 + 2], x[n * 3 + 3], x[n * 3 + 4], x[n * 3 + 5]]
+            box_vector = para2matrix(box_parameter, radians=False, format="lower")
+            value = box_vector[1][1] - 2 * abs(box_vector[2][1])
+            return value
+        con1 = {'type': 'ineq', 'fun': constraint1}
+        con2 = {'type': 'ineq', 'fun': constraint2}
+        con3 = {'type': 'ineq', 'fun': constraint3}
+        cons = ([con1, con2, con3])
+
+        # run minimizer
+        try:
+            # try L-BFGS-B minimization first
+            method = 'L-BFGS-B'
+            result = minimize(box_energy, x, (simulation.context, n), method='L-BFGS-B', jac=jacobian, options={'maxiter': 1000})
+        except:
+            # try trust-constr minimization first
+            method = 'trust-constr'
+            result = minimize(box_energy, x, (simulation.context, n), method='trust-constr', constraints=cons, jac=jacobian, options={'disp': 1, 'xtol': 1e-08, 'gtol': 1e-08, 'maxiter': 1000})
+
+
+
+
+
+        x_new = result.x
+        print("result", x_new)
+        # update simulation with minimized positions and box vectors
+        frac_positions_arr = np.empty([n, 3])
+        for i in range(int(n)):
+            frac_positions_arr[i][:] = x_new[i * 3:i * 3 + 3]
+
+
+        # convert result to box vector
+        box_parameter_new = [x_new[n * 3], x_new[n * 3 + 1], x_new[n * 3 + 2], x_new[n * 3 + 3], x_new[n * 3 + 4], x_new[n * 3 + 5]]
+        box_vectors_new = para2matrix(box_parameter_new, radians=False, format="lower")
+        a = np.array([box_vectors_new[0][0], 0, 0])
+        b = np.array([box_vectors_new[1][0], box_vectors_new[1][1], 0])
+        c = np.array([box_vectors_new[2][0], box_vectors_new[2][1], box_vectors_new[2][2]])
+        simulation.context.setPeriodicBoxVectors(a, b, c)
+
+        # convert fractional position to atom position
+        positions_arr = np.matmul(box_vectors_new, frac_positions_arr.T).T
+        simulation.context.setPositions(positions_arr)
+
+        min_state = simulation.context.getState(getEnergy=True, getPositions=True, getForces=True)
+        min_potential = min_state.getPotentialEnergy()
+        simulation.saveState('data/final_states/' + cod_id + '_final.xml')
+        print('Final Energy = ' + str(min_potential))
+
+        simulation.step(1)
+
+        initial = mdtraj.load_pdb('data/PDB_supercell/' + cod_id + '_supercell.pdb')
+        final = mdtraj.load_pdb('data/minimized_PDB_supercell/' + cod_id + '.pdb')
+        rmsd = mdtraj.rmsd(initial, final)
+        data.append(
+            {
+                'COD ID': cod_id,
+                'RMSD': rmsd,
+                'method': method,
+                'Original Energy': orig_potential,
+                'Minimized Energy (OpenMM)': mid_potential,
+                'Minimized Energy (Cell Minimization)': min_potential,
+                'Original Box Vectors': A,
+                'Minimized Box Vectors': np.array([a, b, c]),
+                'Original Box parameters': box_parameter,
+                'Minimized Box parameter': box_parameter_new,
+                'Box parameter - Last five gradient': " ",
+                'Gradient A': grad_temp_func0[-5:-1],
+                'Gradient B': grad_temp_func1[-5:-1],
+                'Gradient C': grad_temp_func2[-5:-1],
+                'Gradient alpha': grad_temp_func3[-5:-1],
+                'Gradient beta': grad_temp_func4[-5:-1],
+                'Gradient gamma': grad_temp_func5[-5:-1],
+                'Atom position - Last five gradient': " ",
+                'Gradient reduced positions (x0)': reduced_positions_gradient_x0[-5:-1],
+                'Gradient reduced positions (y0)': reduced_positions_gradient_y0[-5:-1],
+                'Gradient reduced positions (z0)': reduced_positions_gradient_z0[-5:-1],
+                'Gradient reduced positions (x100)': reduced_positions_gradient_x100[-5:-1],
+                'Gradient reduced positions (y100)': reduced_positions_gradient_y100[-5:-1],
+                'Gradient reduced positions (z100)': reduced_positions_gradient_z100[-5:-1],
+                'Gradient reduced positions (x200)': reduced_positions_gradient_x200[-5:-1],
+                'Gradient reduced positions (y200)': reduced_positions_gradient_y200[-5:-1],
+                'Gradient reduced positions (z200)': reduced_positions_gradient_z200[-5:-1],
+
+            })
+        with open('data/rmsd_values.txt', 'a') as f:
+            f.write('%s\t%s\n' % (cod_id, rmsd[0]))
     except Exception as e:
-        logging.error('PDB/SMILES error with ID %s' % cod_id)
+        logging.error('Generic error with ID %s' % cod_id)
         logging.error(e)
         continue
-    try:
-        # load supercell pdb file (2x2x2) into topology
-        # replace cod_id to
-        pdb_file = PDBFile('data/PDB_supercell/' + "2100147" + '_supercell.pdb')
-        off_top = Topology.from_openmm(pdb_file.topology, [off_mol])
-    except Exception as e:
-        logging.error('Topology error with ID %s' % cod_id)
-        logging.error(e)
-        continue
-    # Create MD simulation inputs
-    system = forcefield.create_openmm_system(off_top)
-    integrator = openmm.VerletIntegrator(1 * unit.femtoseconds)
-    platform = openmm.Platform.getPlatformByName('Reference')
-
-    try:
-        # create simulation, catch errors
-        simulation = openmm.app.Simulation(pdb_file.topology, system, integrator, platform)
-    except Exception as e:
-        logging.error('Simulation Build error with ID %s' % cod_id)
-        logging.error(e)
-        continue
-    # set initial positions from pdbfile
-    positions = pdb_file.getPositions()
-    simulation.context.setPositions(positions)
-
-    # set reporters
-    pdb_reporter = openmm.app.PDBReporter('data/minimized_PDB_supercell/' + cod_id + '.pdb', 1)
-    simulation.reporters.append(pdb_reporter)
-    # set positions
-    simulation.context.setPositions(positions)
-    # save state and print initial PE
-    simulation.saveState('data/initial_states/' + cod_id + '_initial.xml')
-    orig_potential = simulation.context.getState(getEnergy=True).getPotentialEnergy()
-    if orig_potential.value_in_unit(unit.kilojoule_per_mole) > 1e24:
-        # Skip if the initial energy evaluation is infeasibly high
-        continue
-    print('Initial Energy ' + str(orig_potential))
-    # Minimize Energy and save final state
-    print('Minimizing Energy!')
-    simulation.minimizeEnergy(maxIterations=100000)  # Perform initial minimization with openMM minimizer
-    mid_potential = simulation.context.getState(getEnergy=True).getPotentialEnergy()
-    # build x array to feed to minimizer
-    box_vectors = pdb_file.topology.getPeriodicBoxVectors()
-    A = np.array(box_vectors.value_in_unit(unit.nano * unit.meter))
-    numpy_positions = simulation.context.getState(getPositions=True).getPositions(asNumpy=True)
-    print("Initial box vector\n", A)
-    # convert box vector to box parameter
-    box_parameter = matrix2para(A, radians=False)
-    print("Initial box parameter\n", box_parameter)
-    box_vectors = para2matrix(box_parameter, radians=False, format="lower")
-    # convert atom position to fractional position
-    frac_positions_arr = np.matmul(np.linalg.inv(box_vectors), numpy_positions.T).T
-    x = np.append(frac_positions_arr.flatten(), [box_parameter[0], box_parameter[1], box_parameter[2], box_parameter[3], box_parameter[4], box_parameter[5]])
-    n = len(frac_positions_arr)
-
-
-    # constraint for minimizer
-    def constraint1(x):
-        box_parameter = [x[n * 3], x[n * 3 + 1], x[n * 3 + 2], x[n * 3 + 3], x[n * 3 + 4], x[n * 3 + 5]]
-        box_vector = para2matrix(box_parameter, radians=False, format="lower")
-        box_vector.flatten()
-        value = box_vector[0][0] - 2 * abs(box_vector[1][0])
-        return value
-    def constraint2(x):
-        box_parameter = [x[n * 3], x[n * 3 + 1], x[n * 3 + 2], x[n * 3 + 3], x[n * 3 + 4], x[n * 3 + 5]]
-        box_vector = para2matrix(box_parameter, radians=False, format="lower")
-        value = box_vector[0][0] - 2 * abs(box_vector[2][0])
-        return value
-    def constraint3(x):
-        box_parameter = [x[n * 3], x[n * 3 + 1], x[n * 3 + 2], x[n * 3 + 3], x[n * 3 + 4], x[n * 3 + 5]]
-        box_vector = para2matrix(box_parameter, radians=False, format="lower")
-        value = box_vector[1][1] - 2 * abs(box_vector[2][1])
-        return value
-    con1 = {'type': 'ineq', 'fun': constraint1}
-    con2 = {'type': 'ineq', 'fun': constraint2}
-    con3 = {'type': 'ineq', 'fun': constraint3}
-    cons = ([con1, con2, con3])
-
-    # run minimizer
-    result = minimize(box_energy, x, (simulation.context, n), method='trust-constr', constraints=cons, jac=jacobian, options={'disp': 1, 'xtol': 1e-08, 'gtol': 1e-08, 'maxiter': 1000})
-    # cProfile.run("minimize(box_energy, x, (simulation.context, n))")
-
-    x_new = result.x
-    print("result", x_new)
-    # update simulation with minimized positions and box vectors
-    frac_positions_arr = np.empty([n, 3])
-    for i in range(int(n)):
-        frac_positions_arr[i][:] = x_new[i * 3:i * 3 + 3]
-
-
-    # convert result to box vector
-    box_parameter_new = [x_new[n * 3], x_new[n * 3 + 1], x_new[n * 3 + 2], x_new[n * 3 + 3], x_new[n * 3 + 4], x_new[n * 3 + 5]]
-    box_vectors_new = para2matrix(box_parameter_new, radians=False, format="lower")
-    a = np.array([box_vectors_new[0][0], 0, 0])
-    b = np.array([box_vectors_new[1][0], box_vectors_new[1][1], 0])
-    c = np.array([box_vectors_new[2][0], box_vectors_new[2][1], box_vectors_new[2][2]])
-    simulation.context.setPeriodicBoxVectors(a, b, c)
-
-    # convert fractional position to atom position
-    positions_arr = np.matmul(box_vectors_new, frac_positions_arr.T).T
-    simulation.context.setPositions(positions_arr)
-
-    min_state = simulation.context.getState(getEnergy=True, getPositions=True, getForces=True)
-    min_potential = min_state.getPotentialEnergy()
-    simulation.saveState('data/final_states/' + cod_id + '_final.xml')
-    print('Final Energy = ' + str(min_potential))
-
-    simulation.step(1)
-
-    initial = mdtraj.load_pdb('data/PDB_supercell/' + cod_id + '_supercell.pdb')
-    final = mdtraj.load_pdb('data/minimized_PDB_supercell/' + cod_id + '.pdb')
-    rmsd = mdtraj.rmsd(initial, final)
-    data.append(
-        {
-            'COD ID': cod_id,
-            'RMSD': rmsd,
-            'Original Energy': orig_potential,
-            'Minimized Energy (OpenMM)': mid_potential,
-            'Minimized Energy (Cell Minimization)': min_potential,
-            'Original Box Vectors': A,
-            'Minimized Box Vectors': np.array([a, b, c]),
-            'Original Box parameters': box_parameter,
-            'Minimized Box parameter': box_parameter_new,
-            'Box parameter - Last five gradient': " ",
-            'Gradient A': grad_temp_func0[-5:-1],
-            'Gradient B': grad_temp_func1[-5:-1],
-            'Gradient C': grad_temp_func2[-5:-1],
-            'Gradient alpha': grad_temp_func3[-5:-1],
-            'Gradient beta': grad_temp_func4[-5:-1],
-            'Gradient gamma': grad_temp_func5[-5:-1],
-            'Atom position - Last five gradient': " ",
-            'Gradient reduced positions (x0)': reduced_positions_gradient_x0[-5:-1],
-            'Gradient reduced positions (y0)': reduced_positions_gradient_y0[-5:-1],
-            'Gradient reduced positions (z0)': reduced_positions_gradient_z0[-5:-1],
-            'Gradient reduced positions (x100)': reduced_positions_gradient_x100[-5:-1],
-            'Gradient reduced positions (y100)': reduced_positions_gradient_y100[-5:-1],
-            'Gradient reduced positions (z100)': reduced_positions_gradient_z100[-5:-1],
-            'Gradient reduced positions (x200)': reduced_positions_gradient_x200[-5:-1],
-            'Gradient reduced positions (y200)': reduced_positions_gradient_y200[-5:-1],
-            'Gradient reduced positions (z200)': reduced_positions_gradient_z200[-5:-1],
-
-        })
-    with open('data/rmsd_values.txt', 'a') as f:
-        f.write('%s\t%s\n' % (cod_id, rmsd[0]))
-#    except Exception as e:
-#        logging.error('Generic error with ID %s' % cod_id)
-#        logging.error(e)
-#        continue
 
 # (plot) gradient + parameter vs iteration
     plt.switch_backend('agg')
