@@ -1,0 +1,10 @@
+ERROR:root:Generic error with ID 2212018.cif
+Traceback (most recent call last):
+  File "/home/yu-tang/PycharmProjects/pythonProject/OpenFFCrystalBenchmarking/xtalmd-scripts/xtalmdscripts/supercellbuilding/make_supercell.py", line 1271, in main
+    replicated_mol_list, mol_identifies, unitcell_in_supercell_fracs = generate_replicated_mol_list(
+  File "/home/yu-tang/PycharmProjects/pythonProject/OpenFFCrystalBenchmarking/xtalmd-scripts/xtalmdscripts/supercellbuilding/make_supercell.py", line 1078, in generate_replicated_mol_list
+    mol_list = make_P1(cell, atom_crds_ortho, atom_num, addhs, use_openeye)
+  File "/home/yu-tang/PycharmProjects/pythonProject/OpenFFCrystalBenchmarking/xtalmd-scripts/xtalmdscripts/supercellbuilding/make_supercell.py", line 865, in make_P1
+    xyz2mol.xyz2mol(
+IndexError: list index out of range
+ERROR:root:list index out of range
