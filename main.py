@@ -16,6 +16,7 @@ import pandas as pd
 from scipy.optimize import minimize
 import csv
 
+maxiterations = 200
 # Functions to minimize energy with respect to box vectors
 # forces provide 3*n derivatives of energy
 # wrt position, +6 more derivatives of energy wrt box vectors
@@ -151,7 +152,7 @@ for pdb in os.listdir('data/PDB'):
             logging.error(e)
             continue
         try:
-            # load supercell pdb file (2x2x2) into topology
+            # load supercell pdb file into topology
             pdb_file = PDBFile('data/PDB_supercell/' + cod_id + '_supercell.pdb')
             off_top = Topology.from_openmm(pdb_file.topology, [off_mol])
         except Exception as e:
@@ -197,7 +198,7 @@ for pdb in os.listdir('data/PDB'):
         x = np.append(numpy_positions.flatten(), [A[0][0], A[1][0], A[1][1], A[2][0], A[2][1], A[2][2]])
         n = len(numpy_positions)
         # run minimizer
-        result = minimize(box_energy, x, (simulation.context, n), method='L-BFGS-B', jac=jacobian, options={'maxiter': 100})
+        result = minimize(box_energy, x, (simulation.context, n), method='L-BFGS-B', jac=jacobian, options={'maxiter': maxiterations})
         print(result)
         x_new = result.x
         # # update simulation with minimized positions and box vectors
@@ -219,6 +220,9 @@ for pdb in os.listdir('data/PDB'):
 
         initial = mdtraj.load_pdb('data/PDB_supercell/' + cod_id + '_supercell.pdb')
         final = mdtraj.load_pdb('data/minimized_PDB_supercell/' + cod_id + '.pdb')
+
+        # calculate the RMSD; we need to figure out how to properly account for wrapping.
+        
         rmsd = mdtraj.rmsd(initial, final)
         data.append(
             {

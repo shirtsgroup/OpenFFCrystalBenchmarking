@@ -4,9 +4,10 @@ import pymol
 import os
 from openbabel import pybel
 
+mindist = 20.0  # minimum distance in angstroms
 for f in os.listdir('data/PDB'):
     print(f)
-    # load pdb file to get unit cell dimensions and pick # of cells to ensure each dimension is >18 A
+    # load pdb file to get unit cell dimensions and pick # of cells to ensure each dimension is >20 A
     try:
         mol = next(pybel.readfile('pdb','data/PDB/' + f))
     except Exception as e:
