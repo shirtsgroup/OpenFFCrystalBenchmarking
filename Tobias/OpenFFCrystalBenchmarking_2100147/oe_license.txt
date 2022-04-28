@@ -1,0 +1,165 @@
+################# ACADEMIC LICENSE ##################################
+#                                                                   #
+#   This file is a license for OpenEye Scientific Software.  Any    #
+#   modifications to this file may invalidate the license.          #
+#                                                                   #
+#   The Laboratory of Michael Shirts                                #
+#   University of Colorado Boulder                                  #
+#                                                                   #
+#   Wed Feb 10 15:15:27 2021                                        #
+#####################################################################
+#PRODUCT: bioisostere
+#EXP_DATE: 2022 02 10
+#LICENSEE: The Laboratory of Michael Shirts
+#SITE: University of Colorado Boulder
+LICENSE_KEY: 32c7eb6410d6bec5c7167139875b0931f014f8fc37f3903dc1bf62ea983501c5
+#PRODUCT: docking
+#EXP_DATE: 2022 02 10
+#FEATURES: python;java;clr
+#LICENSEE: The Laboratory of Michael Shirts
+#SITE: University of Colorado Boulder
+LICENSE_KEY: 6150f4e4cbc7e218f3cbdc9a661fa770f5bc6e142d5f455f440109afb8568e34
+#PRODUCT: eon
+#EXP_DATE: 2022 02 10
+#LICENSEE: The Laboratory of Michael Shirts
+#SITE: University of Colorado Boulder
+LICENSE_KEY: 57911c9592d1fa256bcda23cffe41feb5b8264d687be70f296c0a410b1b1f03f
+#PRODUCT: fastrocs
+#EXP_DATE: 2022 02 10
+#FEATURES: python;java;clr
+#LICENSEE: The Laboratory of Michael Shirts
+#SITE: University of Colorado Boulder
+LICENSE_KEY: e1e6a5712e8d39d5341ca10d7e487fdfd4c45a5d92b7d8d11bed8c4931122d7c
+#PRODUCT: filter
+#EXP_DATE: 2022 02 10
+#FEATURES: toolkit;python;java;clr
+#LICENSEE: The Laboratory of Michael Shirts
+#SITE: University of Colorado Boulder
+LICENSE_KEY: 2ffb948c89b782257aa28312629cc2fbf4c64ac75d7af4c991d3cd71b26ab061
+#PRODUCT: fred2
+#EXP_DATE: 2022 02 10
+#LICENSEE: The Laboratory of Michael Shirts
+#SITE: University of Colorado Boulder
+LICENSE_KEY: 5de042050a8f593f6f7ad4932912dbc9a3315dad8798a5bb108dd72362672fe0
+#PRODUCT: grapheme
+#EXP_DATE: 2022 02 10
+#FEATURES: python;java;clr
+#LICENSEE: The Laboratory of Michael Shirts
+#SITE: University of Colorado Boulder
+LICENSE_KEY: 7d22f272968e3d32476a056a9a07f46d299687c8f267999ee5ddd1e4c34880a9
+#PRODUCT: graphsim
+#EXP_DATE: 2022 02 10
+#FEATURES: python;java;clr
+#LICENSEE: The Laboratory of Michael Shirts
+#SITE: University of Colorado Boulder
+LICENSE_KEY: c06e5e9e6ddf0bad62cf41937d751bdd09a7a7b55846ee6664fd88340570dded
+#PRODUCT: iupac
+#EXP_DATE: 2022 02 10
+#FEATURES: python;java;clr
+#LICENSEE: The Laboratory of Michael Shirts
+#SITE: University of Colorado Boulder
+LICENSE_KEY: f70ade818e1509d3fa67d88a9a4921b94d73d4381f9b72927b5f846528de15ba
+#PRODUCT: oechem
+#EXP_DATE: 2022 02 10
+#FEATURES: python;java;clr
+#LICENSEE: The Laboratory of Michael Shirts
+#SITE: University of Colorado Boulder
+LICENSE_KEY: 742fb28408519a4a98e180ea0b8c812ad491be7696cfe8c6ba68455cb3dc00b8
+#PRODUCT: oedepict
+#EXP_DATE: 2022 02 10
+#FEATURES: python;java;clr
+#LICENSEE: The Laboratory of Michael Shirts
+#SITE: University of Colorado Boulder
+LICENSE_KEY: a4da8e7e86b8bc00a2a61c83242ea35cddfc03e987526483b7af7fb6a4b7bbf3
+#PRODUCT: oemedchem
+#EXP_DATE: 2022 02 10
+#FEATURES: python;java;clr
+#LICENSEE: The Laboratory of Michael Shirts
+#SITE: University of Colorado Boulder
+LICENSE_KEY: dfe84685d13e9184aea6cddaf886e5bb8587b50ecdb57d9c0ab97113c729afb0
+#PRODUCT: omega
+#EXP_DATE: 2022 02 10
+#FEATURES: gas-phase;toolkit;python;java;clr
+#LICENSEE: The Laboratory of Michael Shirts
+#SITE: University of Colorado Boulder
+LICENSE_KEY: eb0e14c436e1828e024f041c097e4f745468e1320f5dcd095a8e5001713a8c95
+#PRODUCT: omega-db
+#EXP_DATE: 2022 02 10
+#LICENSEE: The Laboratory of Michael Shirts
+#SITE: University of Colorado Boulder
+LICENSE_KEY: 4e9ea36611e8892fde58de86329054b7befe046adac126e8bcd9ffee0a9b1e8b
+#PRODUCT: posit
+#EXP_DATE: 2022 02 10
+#LICENSEE: The Laboratory of Michael Shirts
+#SITE: University of Colorado Boulder
+LICENSE_KEY: f5e706694a51675a3eb2d308ecd1f55ed4869d9beb53fcd1f2650748abbb79b7
+#PRODUCT: quacpac
+#EXP_DATE: 2022 02 10
+#FEATURES: beta;python;java;clr
+#LICENSEE: The Laboratory of Michael Shirts
+#SITE: University of Colorado Boulder
+LICENSE_KEY: f4c589cff05806cb164ef972dfe5861a096dc3714f8c49478890779572b5c15b
+#PRODUCT: rocs
+#EXP_DATE: 2022 02 10
+#LICENSEE: The Laboratory of Michael Shirts
+#SITE: University of Colorado Boulder
+LICENSE_KEY: 0c054bd3fea3c8025c70e960519b0decfea173d60f853ecc009d7351fdb76d0a
+#PRODUCT: shape
+#EXP_DATE: 2022 02 10
+#FEATURES: molecules;grids;python;java;clr
+#LICENSEE: The Laboratory of Michael Shirts
+#SITE: University of Colorado Boulder
+LICENSE_KEY: f7a68c6912f591ce3c22ad8a021ea2ff902de303c6f8d2aae5e710d6875f7225
+#PRODUCT: spicoli
+#EXP_DATE: 2022 02 10
+#FEATURES: python;java;clr
+#LICENSEE: The Laboratory of Michael Shirts
+#SITE: University of Colorado Boulder
+LICENSE_KEY: a24829aff752d8bbbcae5b369d9781d06591d2290d5399faee9b77fd01057893
+#PRODUCT: sprucetk
+#EXP_DATE: 2022 02 10
+#FEATURES: python;java;clr
+#LICENSEE: The Laboratory of Michael Shirts
+#SITE: University of Colorado Boulder
+LICENSE_KEY: 632585b1a33475a6c06e1bde4405f82deb9a9dc493981b331dcd66518eeeeed8
+#PRODUCT: spruce
+#EXP_DATE: 2022 02 10
+#LICENSEE: The Laboratory of Michael Shirts
+#SITE: University of Colorado Boulder
+LICENSE_KEY: 15388432c9754fe7fd0c75b0bd58dc909f87df8b8bc8c69424e8d968732f2fa9
+#PRODUCT: szmap
+#EXP_DATE: 2022 02 10
+#LICENSEE: The Laboratory of Michael Shirts
+#SITE: University of Colorado Boulder
+LICENSE_KEY: 2aed4105f9997410ce338022340c0856b3d8a8adc5e4528bbd7717be245b5712
+#PRODUCT: szmaptk
+#EXP_DATE: 2022 02 10
+#FEATURES: python;java;clr
+#LICENSEE: The Laboratory of Michael Shirts
+#SITE: University of Colorado Boulder
+LICENSE_KEY: 898a96ae34e3912c75c0fe11255b1bfbf423162d43f7f2926a7e7ffa69eeeaa2
+#PRODUCT: szybki
+#EXP_DATE: 2022 02 10
+#FEATURES: python;java;clr
+#LICENSEE: The Laboratory of Michael Shirts
+#SITE: University of Colorado Boulder
+LICENSE_KEY: 78ea10f75eacffe8c06e1de19cb4fee5f03ff8bcbccef2337b6f3e95433267af
+#PRODUCT: case
+#EXP_DATE: 2022 02 10
+#FEATURES: python;java;clr
+#LICENSEE: The Laboratory of Michael Shirts
+#SITE: University of Colorado Boulder
+LICENSE_KEY: b93c4f1d0e0cea3b545e0f1c6b630f273776dc1c4e79a641a83bcc232917d07c
+#PRODUCT: vida
+#EXP_DATE: 2022 02 10
+#FEATURES: script line
+#LICENSEE: The Laboratory of Michael Shirts
+#SITE: University of Colorado Boulder
+LICENSE_KEY: 31d267edc1d228e1b8b76462fa9f89cc597c43f62ee345ec06373ba3e2414146
+#PRODUCT: zap
+#EXP_DATE: 2022 02 10
+#FEATURES: basic toolkit;protein pka;perfect charge;python;java;clr
+#LICENSEE: The Laboratory of Michael Shirts
+#SITE: University of Colorado Boulder
+LICENSE_KEY: 481cebcdd4fed8d445f9011c9af17339e73c284176c132fbfc7bc6d8918adcec
+
