@@ -150,10 +150,10 @@ def box_energy(x,*args):
     c = np.array([box_vectors[2][0],box_vectors[2][1],box_vectors[2][2]])
     # (TEST) print to monitor the result
     #print("-------------------")
-    print("periodic box vectors")
-    print(a)
-    print(b)
-    print(c)
+    #print("periodic box vectors")
+    #print(a)
+    #print(b)
+    #print(c)
     #(TEST) convert fractional position to atom position
     positions_arr = np.matmul(box_vectors, frac_positions_arr.T).T
     # Set Context with positions and periodic boundary conditions
@@ -390,7 +390,7 @@ for pdb in os.listdir('data/PDB'):
         try:
             # try L-BFGS-B minimization first
             method = 'L-BFGS-B'
-            result = minimize(box_energy, x, (simulation.context, n), method='L-BFGS-B', jac=jacobian, options={'maxiter': 1000})
+            result = minimize(box_energy, x, (simulation.context, n), method='L-BFGS-B', jac=jacobian, options={'disp': 1, 'maxiter': 1000})
         except:
             # try trust-constr minimization first
             method = 'trust-constr'

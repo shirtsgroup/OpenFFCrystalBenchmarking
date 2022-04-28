@@ -1398,7 +1398,7 @@ def main():
             except:
                 pass
 
-        except Exception as e:
+        except BaseException  as e:
             logging.error('Generic error with ID %s' % f, exc_info=True)
             logging.error(e)
 
