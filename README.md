@@ -12,7 +12,7 @@ Project was coded for Python 3.9. Refer to `requirements.txt` file for required 
 
 1. Download list of desired structures from COD using list of COD IDs in `COD_ID_List.txt` and `COD_import.py` script. This downloads CIF files from COD and converts to PDB format using pybel. These are output in the `data/CIF` and `data/PDB` directories.
 2. Create supercell from PDB file using PyMol `supercell` function. This cell is created to be large enought to satisfy that periodic boundary conditions are greater than 2.4 nm. This is done in the `supercell_generation.py` script and output in the `data/PDB_supercell` directory.
-3. Paramaterize using openFF and build MD simulation in openMM. Perform energy minimization by 'L-BFGS-B' or 'trust-constr'(constraint)and record the initial and final energy values as well as the RMSD20 between initial and final state.
+3. Paramaterize using openFF and build MD simulation in openMM. Perform energy minimization by 'L-BFGS-B' or 'trust-constr'(with period boundary constraint) and record the initial and final energy values as well as the RMSD20 between initial and final state.
    1. `main.py` will perform an energy minimization which includes custom functions to minimize the unit cell as well as fractional atom positions. This script will also output initial and final box parameters.
    2. `main_no_box_minimization.py` will perform only energy minimization with respect to position using the built-in OpenMM energy minimization. 
 
