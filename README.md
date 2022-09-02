@@ -18,7 +18,7 @@ Project was coded for Python 3.9. Refer to `requirements.txt` file for required 
 
 Results that are output in the `data` directory:
 1. `minimzation_results.csv` is a csv file with COD ID #, initial and final energies, and RMSD20
-between those states. If box paarameters minimization is performed, the initial and final box parameters are also output.
+between those states. If box paarameters minimization is performed, the initial and final box parameters are also output. The max iteration of 'L-BFGS-B' or 'trust-constr'is 100.
 2. `minimization_results.pkl` is a pickled file of the underlying Pandas DataFrame for the above data.
 3. `rmsd_values.txt` is a tab separated text data file that only reports COD ID and RMSD20 values.
 4. `initial_states` and `final_states` directories contain the .xml state files from OpenMM saved before and after energy minimzation.
