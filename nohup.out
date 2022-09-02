@@ -959,3 +959,2499 @@ F     = final function value
   F =  -100928.38078318365     
 
 CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH             
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,3,3,4107711
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,4,5,7200790
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,3,4500369
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,3,3,4020664
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2105585
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 6,3,3,2012958
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,4,4,2104943
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,5,4,7052848
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,4,3,2015070
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,3,4,2105330
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 6,3,3,1511816
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2203540
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,3,3,4129192
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2107937
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2100349
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,3,4025034
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,3,6,7219429
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,1549860
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,4,3,2205643
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,3,3,2015769
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,5,4,2007511
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,3,2229458
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,4,4,2002929
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,3,3,1100994
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2238806
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,6,3,1519873
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,3,3,7220218
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,4,2217204
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,5,3500113
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,5,3,2209888
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,4,2021969
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2020594
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,4,3,7157439
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,4,3,8100793
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2204871
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 2,7,2,1517337
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,3,2226624
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2206832
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,7,3,4026675
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,3,4116203
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,4,4,1545026
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,4,4,2012828
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,5,3,2236654
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,5,3,2231307
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,3,1555524
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,4,3,1513592
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,5,3,7121743
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,2,7,2219974
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 6,5,2,1100992
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,5,3,4023405
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,4,4,7213183
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,5,3,4116819
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,4,3,7054571
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,5,3,2102305
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,4,3,2237654
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,5,3,2223130
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,3,2105702
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 1)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 2)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 3)
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,5,9009215
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,5,3,2004882
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,3,2241317
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,5,3,2021921
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,3,3,2200633
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,3,5,7238219
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2217222
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,3,3,2100662
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,3,7,7100858
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 6,3,3,4038405
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,6,3,7220866
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,3,3,2216977
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,5,3,2104971
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 6,3,3,2203006
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,4,3,7228868
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,4,7216950
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,5,4,4507100
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,3,4515127
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,4,4,2105026
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2215272
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,4037918
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,4,7154682
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,3,6,7206161
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,3,4,7056752
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2200608
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,3,3,2200184
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,5,4,7232896
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,5,5,4501703
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,4034456
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 6,3,4,2206506
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,5,3,1504357
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,6,6,2006099
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,3,2236470
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,5,5,2100665
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,5,4,2203632
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,4,4,1511801
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 6,3,3,2208241
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,5,3,2300006
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,3,4,2212364
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,5,5,7200842
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,3,3,2208405
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,4,7204117
+==============================
+*** Open Babel Warning  in PerceiveBondOrders
+  Failed to kekulize aromatic bonds in OBMol::PerceiveBondOrders (title is ./data/PDB_supercell/7204117_supercell.pdb)
+
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2200599
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2210911
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,5,4,2100147
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 6,4,4,7226905
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 6,4,4,7238221
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,5,3,4517841
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,5,4,4508010
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,3,3,2018826
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,3,4,2008185
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,2,1100249
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2100348
+4107711.pdb
+ Save: wrote "./data/PDB_supercell/4107711_supercell.pdb".
+7200790.pdb
+ Save: wrote "./data/PDB_supercell/7200790_supercell.pdb".
+4500369.pdb
+ Save: wrote "./data/PDB_supercell/4500369_supercell.pdb".
+4020664.pdb
+ Save: wrote "./data/PDB_supercell/4020664_supercell.pdb".
+2105585.pdb
+ Save: wrote "./data/PDB_supercell/2105585_supercell.pdb".
+2012958.pdb
+ Save: wrote "./data/PDB_supercell/2012958_supercell.pdb".
+2104943.pdb
+ Save: wrote "./data/PDB_supercell/2104943_supercell.pdb".
+7052848.pdb
+ Save: wrote "./data/PDB_supercell/7052848_supercell.pdb".
+2015070.pdb
+ Save: wrote "./data/PDB_supercell/2015070_supercell.pdb".
+2105330.pdb
+ Save: wrote "./data/PDB_supercell/2105330_supercell.pdb".
+1511816.pdb
+ Save: wrote "./data/PDB_supercell/1511816_supercell.pdb".
+2203540.pdb
+ Save: wrote "./data/PDB_supercell/2203540_supercell.pdb".
+4129192.pdb
+ Save: wrote "./data/PDB_supercell/4129192_supercell.pdb".
+2107937.pdb
+ Save: wrote "./data/PDB_supercell/2107937_supercell.pdb".
+2100349.pdb
+ Save: wrote "./data/PDB_supercell/2100349_supercell.pdb".
+4025034.pdb
+ Save: wrote "./data/PDB_supercell/4025034_supercell.pdb".
+7219429.pdb
+ Save: wrote "./data/PDB_supercell/7219429_supercell.pdb".
+1549860.pdb
+ Save: wrote "./data/PDB_supercell/1549860_supercell.pdb".
+2205643.pdb
+ Save: wrote "./data/PDB_supercell/2205643_supercell.pdb".
+2015769.pdb
+ Save: wrote "./data/PDB_supercell/2015769_supercell.pdb".
+2007511.pdb
+ Save: wrote "./data/PDB_supercell/2007511_supercell.pdb".
+2229458.pdb
+ Save: wrote "./data/PDB_supercell/2229458_supercell.pdb".
+2002929.pdb
+ Save: wrote "./data/PDB_supercell/2002929_supercell.pdb".
+1100994.pdb
+ Save: wrote "./data/PDB_supercell/1100994_supercell.pdb".
+2238806.pdb
+ Save: wrote "./data/PDB_supercell/2238806_supercell.pdb".
+1519873.pdb
+ Save: wrote "./data/PDB_supercell/1519873_supercell.pdb".
+7220218.pdb
+ Save: wrote "./data/PDB_supercell/7220218_supercell.pdb".
+2217204.pdb
+ Save: wrote "./data/PDB_supercell/2217204_supercell.pdb".
+3500113.pdb
+ Save: wrote "./data/PDB_supercell/3500113_supercell.pdb".
+2209888.pdb
+ Save: wrote "./data/PDB_supercell/2209888_supercell.pdb".
+2021969.pdb
+ Save: wrote "./data/PDB_supercell/2021969_supercell.pdb".
+2020594.pdb
+ Save: wrote "./data/PDB_supercell/2020594_supercell.pdb".
+7157439.pdb
+ Save: wrote "./data/PDB_supercell/7157439_supercell.pdb".
+8100793.pdb
+ Save: wrote "./data/PDB_supercell/8100793_supercell.pdb".
+2204871.pdb
+ Save: wrote "./data/PDB_supercell/2204871_supercell.pdb".
+1517337.pdb
+ Save: wrote "./data/PDB_supercell/1517337_supercell.pdb".
+2226624.pdb
+ Save: wrote "./data/PDB_supercell/2226624_supercell.pdb".
+2206832.pdb
+ Save: wrote "./data/PDB_supercell/2206832_supercell.pdb".
+4026675.pdb
+ Save: wrote "./data/PDB_supercell/4026675_supercell.pdb".
+4116203.pdb
+ Save: wrote "./data/PDB_supercell/4116203_supercell.pdb".
+1545026.pdb
+ Save: wrote "./data/PDB_supercell/1545026_supercell.pdb".
+2012828.pdb
+ Save: wrote "./data/PDB_supercell/2012828_supercell.pdb".
+2236654.pdb
+ Save: wrote "./data/PDB_supercell/2236654_supercell.pdb".
+2231307.pdb
+ Save: wrote "./data/PDB_supercell/2231307_supercell.pdb".
+1555524.pdb
+ Save: wrote "./data/PDB_supercell/1555524_supercell.pdb".
+1513592.pdb
+ Save: wrote "./data/PDB_supercell/1513592_supercell.pdb".
+7121743.pdb
+ Save: wrote "./data/PDB_supercell/7121743_supercell.pdb".
+2219974.pdb
+ Save: wrote "./data/PDB_supercell/2219974_supercell.pdb".
+1100992.pdb
+ Save: wrote "./data/PDB_supercell/1100992_supercell.pdb".
+4023405.pdb
+ Save: wrote "./data/PDB_supercell/4023405_supercell.pdb".
+7213183.pdb
+ Save: wrote "./data/PDB_supercell/7213183_supercell.pdb".
+4116819.pdb
+ Save: wrote "./data/PDB_supercell/4116819_supercell.pdb".
+7054571.pdb
+ Save: wrote "./data/PDB_supercell/7054571_supercell.pdb".
+2102305.pdb
+ Save: wrote "./data/PDB_supercell/2102305_supercell.pdb".
+2237654.pdb
+ Save: wrote "./data/PDB_supercell/2237654_supercell.pdb".
+2223130.pdb
+ Save: wrote "./data/PDB_supercell/2223130_supercell.pdb".
+2105702.pdb
+ Save: wrote "./data/PDB_supercell/2105702_supercell.pdb".
+9009215.pdb
+Symmetry-Error: Unrecognized space group symbol 'P 42/n m c'.
+Traceback (most recent call last):
+  File "https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py", line 114, in supercell
+    _pymol._ext_gui = None
+  File "https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py", line 170, in symexpcell
+    if v[3]:
+TypeError: 'NoneType' object is not iterable
+ Save: wrote "./data/PDB_supercell/9009215_supercell.pdb".
+9009215
+2004882.pdb
+ Save: wrote "./data/PDB_supercell/2004882_supercell.pdb".
+2241317.pdb
+ Save: wrote "./data/PDB_supercell/2241317_supercell.pdb".
+2021921.pdb
+ Save: wrote "./data/PDB_supercell/2021921_supercell.pdb".
+2200633.pdb
+ Save: wrote "./data/PDB_supercell/2200633_supercell.pdb".
+7238219.pdb
+ Save: wrote "./data/PDB_supercell/7238219_supercell.pdb".
+2217222.pdb
+ Save: wrote "./data/PDB_supercell/2217222_supercell.pdb".
+2100662.pdb
+ Save: wrote "./data/PDB_supercell/2100662_supercell.pdb".
+7100858.pdb
+ Save: wrote "./data/PDB_supercell/7100858_supercell.pdb".
+4038405.pdb
+ Save: wrote "./data/PDB_supercell/4038405_supercell.pdb".
+7220866.pdb
+ Save: wrote "./data/PDB_supercell/7220866_supercell.pdb".
+2216977.pdb
+ Save: wrote "./data/PDB_supercell/2216977_supercell.pdb".
+2104971.pdb
+ Save: wrote "./data/PDB_supercell/2104971_supercell.pdb".
+2203006.pdb
+ Save: wrote "./data/PDB_supercell/2203006_supercell.pdb".
+7228868.pdb
+ Save: wrote "./data/PDB_supercell/7228868_supercell.pdb".
+7216950.pdb
+ Save: wrote "./data/PDB_supercell/7216950_supercell.pdb".
+4507100.pdb
+ Save: wrote "./data/PDB_supercell/4507100_supercell.pdb".
+4515127.pdb
+ Save: wrote "./data/PDB_supercell/4515127_supercell.pdb".
+2105026.pdb
+ Save: wrote "./data/PDB_supercell/2105026_supercell.pdb".
+2215272.pdb
+ Save: wrote "./data/PDB_supercell/2215272_supercell.pdb".
+4037918.pdb
+ Save: wrote "./data/PDB_supercell/4037918_supercell.pdb".
+7154682.pdb
+ Save: wrote "./data/PDB_supercell/7154682_supercell.pdb".
+7206161.pdb
+ Save: wrote "./data/PDB_supercell/7206161_supercell.pdb".
+7056752.pdb
+ Save: wrote "./data/PDB_supercell/7056752_supercell.pdb".
+2200608.pdb
+ Save: wrote "./data/PDB_supercell/2200608_supercell.pdb".
+2200184.pdb
+ Save: wrote "./data/PDB_supercell/2200184_supercell.pdb".
+7232896.pdb
+ Save: wrote "./data/PDB_supercell/7232896_supercell.pdb".
+4501703.pdb
+ Save: wrote "./data/PDB_supercell/4501703_supercell.pdb".
+4034456.pdb
+ Save: wrote "./data/PDB_supercell/4034456_supercell.pdb".
+2206506.pdb
+ Save: wrote "./data/PDB_supercell/2206506_supercell.pdb".
+1504357.pdb
+ Save: wrote "./data/PDB_supercell/1504357_supercell.pdb".
+2006099.pdb
+ Save: wrote "./data/PDB_supercell/2006099_supercell.pdb".
+2236470.pdb
+ Save: wrote "./data/PDB_supercell/2236470_supercell.pdb".
+2100665.pdb
+ Save: wrote "./data/PDB_supercell/2100665_supercell.pdb".
+2203632.pdb
+ Save: wrote "./data/PDB_supercell/2203632_supercell.pdb".
+1511801.pdb
+ Save: wrote "./data/PDB_supercell/1511801_supercell.pdb".
+2208241.pdb
+ Save: wrote "./data/PDB_supercell/2208241_supercell.pdb".
+2300006.pdb
+ Save: wrote "./data/PDB_supercell/2300006_supercell.pdb".
+2212364.pdb
+ Save: wrote "./data/PDB_supercell/2212364_supercell.pdb".
+7200842.pdb
+ Save: wrote "./data/PDB_supercell/7200842_supercell.pdb".
+2208405.pdb
+ Save: wrote "./data/PDB_supercell/2208405_supercell.pdb".
+7204117.pdb
+ Save: wrote "./data/PDB_supercell/7204117_supercell.pdb".
+2200599.pdb
+ Save: wrote "./data/PDB_supercell/2200599_supercell.pdb".
+2210911.pdb
+ Save: wrote "./data/PDB_supercell/2210911_supercell.pdb".
+2100147.pdb
+ Save: wrote "./data/PDB_supercell/2100147_supercell.pdb".
+7226905.pdb
+ Save: wrote "./data/PDB_supercell/7226905_supercell.pdb".
+7238221.pdb
+ Save: wrote "./data/PDB_supercell/7238221_supercell.pdb".
+4517841.pdb
+ Save: wrote "./data/PDB_supercell/4517841_supercell.pdb".
+4508010.pdb
+ Save: wrote "./data/PDB_supercell/4508010_supercell.pdb".
+2018826.pdb
+ Save: wrote "./data/PDB_supercell/2018826_supercell.pdb".
+2008185.pdb
+ Save: wrote "./data/PDB_supercell/2008185_supercell.pdb".
+1100249.pdb
+ Save: wrote "./data/PDB_supercell/1100249_supercell.pdb".
+2100348.pdb
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,5,4037663
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,4,3,1100989
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,4,1519825
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,5,6,2019369
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,3,3,2224771
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,5,3,7206516
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,5,3,2213278
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,5,3,4035731
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,3,3,7206934
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,3,7118053
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,1504777
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,4,3,7117643
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,3,7,2105612
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,7236728
+==============================
+*** Open Babel Warning  in PerceiveBondOrders
+  Failed to kekulize aromatic bonds in OBMol::PerceiveBondOrders (title is ./data/PDB_supercell/7236728_supercell.pdb)
+
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2100437
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,4501702
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,3,7239749
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,3,3,1516412
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,4,3,2014075
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2100350
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,3,2206365
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,4,3,2012267
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,3,5,2205115
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,7,4,2205937
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,3,4,7208075
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2022073
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,4,3,2200844
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,7204118
+==============================
+*** Open Babel Warning  in PerceiveBondOrders
+  Failed to kekulize aromatic bonds in OBMol::PerceiveBondOrders (title is ./data/PDB_supercell/7204118_supercell.pdb)
+
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,4,3,7100390
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,3,4,4512518
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,6,5,1011063
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2005486
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,4,4,2022053
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,4,4,2201333
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,3,4,2311655
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,5,3,2211928
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,3,2008450
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,4,3,1519868
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,6,3,7219800
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,5,7214418
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,3,2201001
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,5,3,7103002
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2014575
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,3,3,7241270
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,3,3,2229006
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,3,7235707
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,4,4,4116821
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,3,3,7045653
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,3,3,7208855
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,4126462
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,3,2231503
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,3,3,2017090
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,4,4,4507232
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 6,3,3,2237525
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,4,3,7052010
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2231429
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,4,2208497
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 6,3,3,2018231
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 2,7,2,4508226
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,4,3,2234064
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,3,3,1517792
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,5,1504349
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,3,1513289
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,5,3,4114396
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,3,3,2018597
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,3,2239864
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 6,3,3,7216997
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,5,4,2203306
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 6,3,3,4037916
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,1513282
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,5,3,4508037
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,3,7236113
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2235036
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,5,4,4116140
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,4,6,1516355
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,4,4,2242302
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,5,3,2241551
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2100840
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,3,2225118
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,4,4511277
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2022026
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,3,3,7241376
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,4,3,7214681
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,5,3,7121745
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 6,5,3,2002966
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,5,3,7210454
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,5,4,2220988
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 6,3,3,2208843
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,4,3,7242545
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,3,4,2231730
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,4,4,2201115
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,5,3,7052009
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,4,4,2220694
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,5,3,5000167
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,5,5,1504385
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2007155
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2311084
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,3,3,2220312
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,6,4,2003630
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,3,3,4037896
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,5,7,4516576
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,3,3,2202092
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,2,2,7204577
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,5,3,4126195
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,6,3,2212018
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,4,4,2238379
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 2,2,7,2103490
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 6,3,3,1518526
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,1011023
+ Save: wrote "./data/PDB_supercell/2100348_supercell.pdb".
+4037663.pdb
+ Save: wrote "./data/PDB_supercell/4037663_supercell.pdb".
+1100989.pdb
+ Save: wrote "./data/PDB_supercell/1100989_supercell.pdb".
+1519825.pdb
+ Save: wrote "./data/PDB_supercell/1519825_supercell.pdb".
+2019369.pdb
+ Save: wrote "./data/PDB_supercell/2019369_supercell.pdb".
+2224771.pdb
+ Save: wrote "./data/PDB_supercell/2224771_supercell.pdb".
+7206516.pdb
+ Save: wrote "./data/PDB_supercell/7206516_supercell.pdb".
+2213278.pdb
+ Save: wrote "./data/PDB_supercell/2213278_supercell.pdb".
+4035731.pdb
+ Save: wrote "./data/PDB_supercell/4035731_supercell.pdb".
+7206934.pdb
+ Save: wrote "./data/PDB_supercell/7206934_supercell.pdb".
+7118053.pdb
+ Save: wrote "./data/PDB_supercell/7118053_supercell.pdb".
+1504777.pdb
+ Save: wrote "./data/PDB_supercell/1504777_supercell.pdb".
+7117643.pdb
+ Save: wrote "./data/PDB_supercell/7117643_supercell.pdb".
+2105612.pdb
+ Save: wrote "./data/PDB_supercell/2105612_supercell.pdb".
+7236728.pdb
+ Save: wrote "./data/PDB_supercell/7236728_supercell.pdb".
+2100437.pdb
+ Save: wrote "./data/PDB_supercell/2100437_supercell.pdb".
+4501702.pdb
+ Save: wrote "./data/PDB_supercell/4501702_supercell.pdb".
+7239749.pdb
+ Save: wrote "./data/PDB_supercell/7239749_supercell.pdb".
+1516412.pdb
+ Save: wrote "./data/PDB_supercell/1516412_supercell.pdb".
+2014075.pdb
+ Save: wrote "./data/PDB_supercell/2014075_supercell.pdb".
+2100350.pdb
+ Save: wrote "./data/PDB_supercell/2100350_supercell.pdb".
+2206365.pdb
+ Save: wrote "./data/PDB_supercell/2206365_supercell.pdb".
+2012267.pdb
+ Save: wrote "./data/PDB_supercell/2012267_supercell.pdb".
+2205115.pdb
+ Save: wrote "./data/PDB_supercell/2205115_supercell.pdb".
+2205937.pdb
+ Save: wrote "./data/PDB_supercell/2205937_supercell.pdb".
+7208075.pdb
+ Save: wrote "./data/PDB_supercell/7208075_supercell.pdb".
+2022073.pdb
+ Save: wrote "./data/PDB_supercell/2022073_supercell.pdb".
+2200844.pdb
+ Save: wrote "./data/PDB_supercell/2200844_supercell.pdb".
+7204118.pdb
+ Save: wrote "./data/PDB_supercell/7204118_supercell.pdb".
+7100390.pdb
+ Save: wrote "./data/PDB_supercell/7100390_supercell.pdb".
+4512518.pdb
+ Save: wrote "./data/PDB_supercell/4512518_supercell.pdb".
+1011063.pdb
+ Save: wrote "./data/PDB_supercell/1011063_supercell.pdb".
+2005486.pdb
+ Save: wrote "./data/PDB_supercell/2005486_supercell.pdb".
+2022053.pdb
+ Save: wrote "./data/PDB_supercell/2022053_supercell.pdb".
+2201333.pdb
+ Save: wrote "./data/PDB_supercell/2201333_supercell.pdb".
+2311655.pdb
+ Save: wrote "./data/PDB_supercell/2311655_supercell.pdb".
+2211928.pdb
+ Save: wrote "./data/PDB_supercell/2211928_supercell.pdb".
+2008450.pdb
+ Save: wrote "./data/PDB_supercell/2008450_supercell.pdb".
+1519868.pdb
+ Save: wrote "./data/PDB_supercell/1519868_supercell.pdb".
+7219800.pdb
+ Save: wrote "./data/PDB_supercell/7219800_supercell.pdb".
+7214418.pdb
+ Save: wrote "./data/PDB_supercell/7214418_supercell.pdb".
+2201001.pdb
+ Save: wrote "./data/PDB_supercell/2201001_supercell.pdb".
+7103002.pdb
+ Save: wrote "./data/PDB_supercell/7103002_supercell.pdb".
+2014575.pdb
+ Save: wrote "./data/PDB_supercell/2014575_supercell.pdb".
+7241270.pdb
+ Save: wrote "./data/PDB_supercell/7241270_supercell.pdb".
+2229006.pdb
+ Save: wrote "./data/PDB_supercell/2229006_supercell.pdb".
+7235707.pdb
+ Save: wrote "./data/PDB_supercell/7235707_supercell.pdb".
+4116821.pdb
+ Save: wrote "./data/PDB_supercell/4116821_supercell.pdb".
+7045653.pdb
+ Save: wrote "./data/PDB_supercell/7045653_supercell.pdb".
+7208855.pdb
+ Save: wrote "./data/PDB_supercell/7208855_supercell.pdb".
+4126462.pdb
+ Save: wrote "./data/PDB_supercell/4126462_supercell.pdb".
+2231503.pdb
+ Save: wrote "./data/PDB_supercell/2231503_supercell.pdb".
+2017090.pdb
+ Save: wrote "./data/PDB_supercell/2017090_supercell.pdb".
+4507232.pdb
+ Save: wrote "./data/PDB_supercell/4507232_supercell.pdb".
+2237525.pdb
+ Save: wrote "./data/PDB_supercell/2237525_supercell.pdb".
+7052010.pdb
+ Save: wrote "./data/PDB_supercell/7052010_supercell.pdb".
+2231429.pdb
+ Save: wrote "./data/PDB_supercell/2231429_supercell.pdb".
+2208497.pdb
+ Save: wrote "./data/PDB_supercell/2208497_supercell.pdb".
+2018231.pdb
+ Save: wrote "./data/PDB_supercell/2018231_supercell.pdb".
+4508226.pdb
+ Save: wrote "./data/PDB_supercell/4508226_supercell.pdb".
+2234064.pdb
+ Save: wrote "./data/PDB_supercell/2234064_supercell.pdb".
+1517792.pdb
+ Save: wrote "./data/PDB_supercell/1517792_supercell.pdb".
+1504349.pdb
+ Save: wrote "./data/PDB_supercell/1504349_supercell.pdb".
+1513289.pdb
+ Save: wrote "./data/PDB_supercell/1513289_supercell.pdb".
+4114396.pdb
+ Save: wrote "./data/PDB_supercell/4114396_supercell.pdb".
+2018597.pdb
+ Save: wrote "./data/PDB_supercell/2018597_supercell.pdb".
+2239864.pdb
+ Save: wrote "./data/PDB_supercell/2239864_supercell.pdb".
+7216997.pdb
+ Save: wrote "./data/PDB_supercell/7216997_supercell.pdb".
+2203306.pdb
+ Save: wrote "./data/PDB_supercell/2203306_supercell.pdb".
+4037916.pdb
+ Save: wrote "./data/PDB_supercell/4037916_supercell.pdb".
+1513282.pdb
+ Save: wrote "./data/PDB_supercell/1513282_supercell.pdb".
+4508037.pdb
+ Save: wrote "./data/PDB_supercell/4508037_supercell.pdb".
+7236113.pdb
+ Save: wrote "./data/PDB_supercell/7236113_supercell.pdb".
+2235036.pdb
+ Save: wrote "./data/PDB_supercell/2235036_supercell.pdb".
+4116140.pdb
+ Save: wrote "./data/PDB_supercell/4116140_supercell.pdb".
+1516355.pdb
+ Save: wrote "./data/PDB_supercell/1516355_supercell.pdb".
+2242302.pdb
+ Save: wrote "./data/PDB_supercell/2242302_supercell.pdb".
+2241551.pdb
+ Save: wrote "./data/PDB_supercell/2241551_supercell.pdb".
+2100840.pdb
+Symmetry-Error: Unrecognized space group symbol 'P a 3'.
+Traceback (most recent call last):
+  File "https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py", line 114, in supercell
+    _pymol._ext_gui = None
+  File "https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py", line 170, in symexpcell
+    if v[3]:
+TypeError: 'NoneType' object is not iterable
+ Save: wrote "./data/PDB_supercell/2100840_supercell.pdb".
+2100840
+2225118.pdb
+ Save: wrote "./data/PDB_supercell/2225118_supercell.pdb".
+4511277.pdb
+ Save: wrote "./data/PDB_supercell/4511277_supercell.pdb".
+2022026.pdb
+ Save: wrote "./data/PDB_supercell/2022026_supercell.pdb".
+7241376.pdb
+ Save: wrote "./data/PDB_supercell/7241376_supercell.pdb".
+7214681.pdb
+ Save: wrote "./data/PDB_supercell/7214681_supercell.pdb".
+7121745.pdb
+ Save: wrote "./data/PDB_supercell/7121745_supercell.pdb".
+2002966.pdb
+ Save: wrote "./data/PDB_supercell/2002966_supercell.pdb".
+7210454.pdb
+ Save: wrote "./data/PDB_supercell/7210454_supercell.pdb".
+2220988.pdb
+ Save: wrote "./data/PDB_supercell/2220988_supercell.pdb".
+2208843.pdb
+ Save: wrote "./data/PDB_supercell/2208843_supercell.pdb".
+7242545.pdb
+ Save: wrote "./data/PDB_supercell/7242545_supercell.pdb".
+2231730.pdb
+ Save: wrote "./data/PDB_supercell/2231730_supercell.pdb".
+2201115.pdb
+ Save: wrote "./data/PDB_supercell/2201115_supercell.pdb".
+7052009.pdb
+ Save: wrote "./data/PDB_supercell/7052009_supercell.pdb".
+2220694.pdb
+ Save: wrote "./data/PDB_supercell/2220694_supercell.pdb".
+5000167.pdb
+ Save: wrote "./data/PDB_supercell/5000167_supercell.pdb".
+1504385.pdb
+ Save: wrote "./data/PDB_supercell/1504385_supercell.pdb".
+2007155.pdb
+ Save: wrote "./data/PDB_supercell/2007155_supercell.pdb".
+2311084.pdb
+ Save: wrote "./data/PDB_supercell/2311084_supercell.pdb".
+2220312.pdb
+ Save: wrote "./data/PDB_supercell/2220312_supercell.pdb".
+2003630.pdb
+ Save: wrote "./data/PDB_supercell/2003630_supercell.pdb".
+4037896.pdb
+ Save: wrote "./data/PDB_supercell/4037896_supercell.pdb".
+4516576.pdb
+ Save: wrote "./data/PDB_supercell/4516576_supercell.pdb".
+2202092.pdb
+ Save: wrote "./data/PDB_supercell/2202092_supercell.pdb".
+7204577.pdb
+ Save: wrote "./data/PDB_supercell/7204577_supercell.pdb".
+4126195.pdb
+ Save: wrote "./data/PDB_supercell/4126195_supercell.pdb".
+2212018.pdb
+ Save: wrote "./data/PDB_supercell/2212018_supercell.pdb".
+2238379.pdb
+ Save: wrote "./data/PDB_supercell/2238379_supercell.pdb".
+2103490.pdb
+ Save: wrote "./data/PDB_supercell/2103490_supercell.pdb".
+1518526.pdb
+ Save: wrote "./data/PDB_supercell/1518526_supercell.pdb".
+1011023.pdb
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,4,7,4506226
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,3,4,2212078
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 1)
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 6,6,5,1010439
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 1)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 2)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 3)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 4)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 5)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 6)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 7)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 8)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 9)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 10)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 11)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 12)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 13)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 14)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 15)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 16)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 17)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 18)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 19)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 20)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 21)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 22)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 23)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 24)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 25)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 26)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 27)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 28)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 29)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 30)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 31)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 32)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 33)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 34)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 35)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 36)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 37)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 38)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 39)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 40)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 41)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 42)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 43)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 44)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 45)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 46)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 47)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 48)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 49)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 50)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 51)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 52)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 53)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 54)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 55)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 56)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 57)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 58)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 59)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 60)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 61)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 62)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 63)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 64)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 65)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 66)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 67)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 68)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 69)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 70)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 71)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 72)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 73)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 74)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 75)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 76)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 77)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 78)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 79)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 80)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 81)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 82)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 83)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 84)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 85)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 86)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 87)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 88)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 89)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 90)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 91)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 92)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 93)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 94)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 95)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 96)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 97)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 98)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 99)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 100)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 101)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 102)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 103)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 104)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 105)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 106)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 107)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 108)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 109)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 110)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 111)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 112)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 113)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 114)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 115)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 116)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 117)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 118)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 119)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 120)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 121)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 122)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 123)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 124)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 125)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 126)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 127)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 128)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 129)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 130)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 131)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 132)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 133)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 134)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 135)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 136)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 137)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 138)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 139)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 140)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 141)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 142)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 143)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 144)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 145)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 146)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 147)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 148)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 149)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 150)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 151)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 152)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 153)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 154)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 155)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 156)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 157)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 158)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 159)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 160)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 161)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 162)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 163)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 164)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 165)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 166)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 167)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 168)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 169)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 170)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 171)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 172)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 173)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 174)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 175)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 176)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 177)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 178)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 179)
+==============================
+*** Open Babel Warning  in parseAtomRecord
+  WARNING: Problems reading a PDB file
+  Problems reading a HETATM or ATOM record.
+  According to the PDB specification,
+  columns 77-78 should contain the element symbol of an atom.
+  but OpenBabel found ' *' (atom 180)
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,3,3,1519191
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,5,4,1011024
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,3,3,2242758
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,3,3,7226846
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,4,3,1520159
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,3,3,2243066
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,3,4,2006075
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,1548052
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2216200
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,5,4,7110463
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2237770
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,4,3,2206542
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,3,3,2221170
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,3,5,2108038
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,4,3,2214563
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,3,3,2238479
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,3,3,7206297
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,6,3,2311654
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,3,7039793
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,5,5,1010060
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,5,4,7238218
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2004431
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,3,5,2203255
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,5,3,2100603
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,3,2236004
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,5,3,4511275
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,4,3,2206151
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,4,3,2207637
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,4,4,4110681
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,4,4,4513829
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,3,2204844
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,4339655
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,3,3,7154066
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,3,2218498
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,2107938
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,4,4,7054714
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,5,3,1519794
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,5,4,7117669
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,3,3,7221877
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,7151750
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,3,3,2212135
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,5,2006784
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,3,2219243
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,4,4,2007371
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,4,2,7151616
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,5,5,7111201
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,7,3,7219235
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,5,3500112
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,3,3,4022058
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,5,3,4513593
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,5,3,2234776
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 2,4,7,2100865
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,4,3,2210848
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,5,5,4507991
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,3,2016262
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,4,3,2240041
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,5,5,4501704
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,3,7059603
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,3,3,1556231
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,3,2101393
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,7,3,3500018
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,4,3,2203241
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,3,2234037
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,6,3,2008677
+==============================
+*** Open Babel Warning  in PerceiveBondOrders
+  Failed to kekulize aromatic bonds in OBMol::PerceiveBondOrders (title is ./data/PDB_supercell/2008677_supercell.pdb)
+
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,4,4,7221763
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 3,3,7,4027137
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 5,3,3,2104176
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 7,4,3,1557858
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 6,6,3,2105032
+PyMOL>run https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py
+PyMOL>supercell 4,3,3,2234322
+ Save: wrote "./data/PDB_supercell/1011023_supercell.pdb".
+4506226.pdb
+ Save: wrote "./data/PDB_supercell/4506226_supercell.pdb".
+2212078.pdb
+ Save: wrote "./data/PDB_supercell/2212078_supercell.pdb".
+1010439.pdb
+ Save: wrote "./data/PDB_supercell/1010439_supercell.pdb".
+1519191.pdb
+ Save: wrote "./data/PDB_supercell/1519191_supercell.pdb".
+1011024.pdb
+ Save: wrote "./data/PDB_supercell/1011024_supercell.pdb".
+2242758.pdb
+ Save: wrote "./data/PDB_supercell/2242758_supercell.pdb".
+7226846.pdb
+ Save: wrote "./data/PDB_supercell/7226846_supercell.pdb".
+1520159.pdb
+ Save: wrote "./data/PDB_supercell/1520159_supercell.pdb".
+2243066.pdb
+ Save: wrote "./data/PDB_supercell/2243066_supercell.pdb".
+2006075.pdb
+ Save: wrote "./data/PDB_supercell/2006075_supercell.pdb".
+1548052.pdb
+ Save: wrote "./data/PDB_supercell/1548052_supercell.pdb".
+2216200.pdb
+ Save: wrote "./data/PDB_supercell/2216200_supercell.pdb".
+7110463.pdb
+ Save: wrote "./data/PDB_supercell/7110463_supercell.pdb".
+2237770.pdb
+ Save: wrote "./data/PDB_supercell/2237770_supercell.pdb".
+2206542.pdb
+ Save: wrote "./data/PDB_supercell/2206542_supercell.pdb".
+2221170.pdb
+ Save: wrote "./data/PDB_supercell/2221170_supercell.pdb".
+2108038.pdb
+ Save: wrote "./data/PDB_supercell/2108038_supercell.pdb".
+2214563.pdb
+ Save: wrote "./data/PDB_supercell/2214563_supercell.pdb".
+2238479.pdb
+ Save: wrote "./data/PDB_supercell/2238479_supercell.pdb".
+7206297.pdb
+ Save: wrote "./data/PDB_supercell/7206297_supercell.pdb".
+2311654.pdb
+ Save: wrote "./data/PDB_supercell/2311654_supercell.pdb".
+7039793.pdb
+ Save: wrote "./data/PDB_supercell/7039793_supercell.pdb".
+1010060.pdb
+Symmetry-Error: Unrecognized space group symbol 'P a 3'.
+Traceback (most recent call last):
+  File "https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py", line 114, in supercell
+    _pymol._ext_gui = None
+  File "https://raw.githubusercontent.com/speleo3/pymol-psico/master/psico/xtal.py", line 170, in symexpcell
+    if v[3]:
+TypeError: 'NoneType' object is not iterable
+ Save: wrote "./data/PDB_supercell/1010060_supercell.pdb".
+1010060
+7238218.pdb
+ Save: wrote "./data/PDB_supercell/7238218_supercell.pdb".
+2004431.pdb
+ Save: wrote "./data/PDB_supercell/2004431_supercell.pdb".
+2203255.pdb
+ Save: wrote "./data/PDB_supercell/2203255_supercell.pdb".
+2100603.pdb
+ Save: wrote "./data/PDB_supercell/2100603_supercell.pdb".
+2236004.pdb
+ Save: wrote "./data/PDB_supercell/2236004_supercell.pdb".
+4511275.pdb
+ Save: wrote "./data/PDB_supercell/4511275_supercell.pdb".
+2206151.pdb
+ Save: wrote "./data/PDB_supercell/2206151_supercell.pdb".
+2207637.pdb
+ Save: wrote "./data/PDB_supercell/2207637_supercell.pdb".
+4110681.pdb
+ Save: wrote "./data/PDB_supercell/4110681_supercell.pdb".
+4513829.pdb
+ Save: wrote "./data/PDB_supercell/4513829_supercell.pdb".
+2204844.pdb
+ Save: wrote "./data/PDB_supercell/2204844_supercell.pdb".
+4339655.pdb
+ Save: wrote "./data/PDB_supercell/4339655_supercell.pdb".
+7154066.pdb
+ Save: wrote "./data/PDB_supercell/7154066_supercell.pdb".
+2218498.pdb
+ Save: wrote "./data/PDB_supercell/2218498_supercell.pdb".
+2107938.pdb
+ Save: wrote "./data/PDB_supercell/2107938_supercell.pdb".
+7054714.pdb
+ Save: wrote "./data/PDB_supercell/7054714_supercell.pdb".
+1519794.pdb
+ Save: wrote "./data/PDB_supercell/1519794_supercell.pdb".
+7117669.pdb
+ Save: wrote "./data/PDB_supercell/7117669_supercell.pdb".
+7221877.pdb
+ Save: wrote "./data/PDB_supercell/7221877_supercell.pdb".
+7151750.pdb
+ Save: wrote "./data/PDB_supercell/7151750_supercell.pdb".
+2212135.pdb
+ Save: wrote "./data/PDB_supercell/2212135_supercell.pdb".
+2006784.pdb
+ Save: wrote "./data/PDB_supercell/2006784_supercell.pdb".
+2219243.pdb
+ Save: wrote "./data/PDB_supercell/2219243_supercell.pdb".
+2007371.pdb
+ Save: wrote "./data/PDB_supercell/2007371_supercell.pdb".
+7151616.pdb
+ Save: wrote "./data/PDB_supercell/7151616_supercell.pdb".
+7111201.pdb
+ Save: wrote "./data/PDB_supercell/7111201_supercell.pdb".
+7219235.pdb
+ Save: wrote "./data/PDB_supercell/7219235_supercell.pdb".
+3500112.pdb
+ Save: wrote "./data/PDB_supercell/3500112_supercell.pdb".
+4022058.pdb
+ Save: wrote "./data/PDB_supercell/4022058_supercell.pdb".
+4513593.pdb
+ Save: wrote "./data/PDB_supercell/4513593_supercell.pdb".
+2234776.pdb
+ Save: wrote "./data/PDB_supercell/2234776_supercell.pdb".
+2100865.pdb
+ Save: wrote "./data/PDB_supercell/2100865_supercell.pdb".
+2210848.pdb
+ Save: wrote "./data/PDB_supercell/2210848_supercell.pdb".
+4507991.pdb
+ Save: wrote "./data/PDB_supercell/4507991_supercell.pdb".
+2016262.pdb
+ Save: wrote "./data/PDB_supercell/2016262_supercell.pdb".
+2240041.pdb
+ Save: wrote "./data/PDB_supercell/2240041_supercell.pdb".
+4501704.pdb
+ Save: wrote "./data/PDB_supercell/4501704_supercell.pdb".
+7059603.pdb
+ Save: wrote "./data/PDB_supercell/7059603_supercell.pdb".
+1556231.pdb
+ Save: wrote "./data/PDB_supercell/1556231_supercell.pdb".
+2101393.pdb
+ Save: wrote "./data/PDB_supercell/2101393_supercell.pdb".
+3500018.pdb
+ Save: wrote "./data/PDB_supercell/3500018_supercell.pdb".
+2203241.pdb
+ Save: wrote "./data/PDB_supercell/2203241_supercell.pdb".
+2234037.pdb
+ Save: wrote "./data/PDB_supercell/2234037_supercell.pdb".
+2008677.pdb
+ Save: wrote "./data/PDB_supercell/2008677_supercell.pdb".
+7221763.pdb
+ Save: wrote "./data/PDB_supercell/7221763_supercell.pdb".
+4027137.pdb
+ Save: wrote "./data/PDB_supercell/4027137_supercell.pdb".
+2104176.pdb
+ Save: wrote "./data/PDB_supercell/2104176_supercell.pdb".
+1557858.pdb
+ Save: wrote "./data/PDB_supercell/1557858_supercell.pdb".
+2105032.pdb
+ Save: wrote "./data/PDB_supercell/2105032_supercell.pdb".
+2234322.pdb
+ Save: wrote "./data/PDB_supercell/2234322_supercell.pdb".

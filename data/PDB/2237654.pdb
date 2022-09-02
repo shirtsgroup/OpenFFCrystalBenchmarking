@@ -1,127 +1,40 @@
-CRYST1    9.617    6.477   11.733  90.00  96.16  90.00 P1                       
-HETATM    1 C1   M0      1       1.595   1.821   0.366  1.00  0.00           C  
-HETATM    2 H1   M0      1       0.934   3.620  -2.355  1.00  0.00           H  
-HETATM    3 O1   M0      1       2.798   2.216   3.360  1.00  0.00           O  
-HETATM    4 C2   M0      1       1.061   2.357  -0.880  1.00  0.00           C  
-HETATM    5 H2   M0      1       2.391   5.177  -1.878  1.00  0.00           H  
-HETATM    6 C3   M0      1       1.399   3.490  -1.561  1.00  0.00           C  
-HETATM    7 H3   M0      1       3.703   5.344  -0.156  1.00  0.00           H  
-HETATM    8 C4   M0      1       2.331   4.485  -1.259  1.00  0.00           C  
-HETATM    9 H4   M0      1       3.914   3.916   1.519  1.00  0.00           H  
-HETATM   10 O2   M0      1       3.696   0.736   2.107  1.00  0.00           O1-
-HETATM   11 N1   M0      1       3.071   1.762   2.272  1.00  0.00           N1+
-HETATM   12 C5   M0      1       3.163   4.587  -0.190  1.00  0.00           C  
-HETATM   13 O3   M0      1       1.102   0.772   0.809  1.00  0.00           O  
-HETATM   14 C6   M0      1       3.297   3.682   0.865  1.00  0.00           C  
-HETATM   15 C7   M0      1       2.646   2.503   1.066  1.00  0.00           C  
-HETATM   16 O4   M0      1       0.091   1.614  -1.411  1.00  0.00           O  
-HETATM   17 H5   M0      1      -0.009   0.946  -0.898  1.00  0.00           H  
-HETATM   18 C1   M0      2      -2.224   5.060   5.466  1.00  0.00           C  
-HETATM   19 H1   M0      2      -1.564   6.859   8.188  1.00  0.00           H  
-HETATM   20 O1   M0      2      -3.428   5.454   2.472  1.00  0.00           O  
-HETATM   21 C2   M0      2      -1.691   5.596   6.712  1.00  0.00           C  
-HETATM   22 H2   M0      2      -3.020   8.415   7.710  1.00  0.00           H  
-HETATM   23 C3   M0      2      -2.029   6.729   7.393  1.00  0.00           C  
-HETATM   24 H3   M0      2      -4.333   8.582   5.989  1.00  0.00           H  
-HETATM   25 C4   M0      2      -2.961   7.723   7.092  1.00  0.00           C  
-HETATM   26 H4   M0      2      -4.544   7.155   4.314  1.00  0.00           H  
-HETATM   27 O2   M0      2      -4.326   3.974   3.725  1.00  0.00           O1-
-HETATM   28 N1   M0      2      -3.700   5.001   3.560  1.00  0.00           N1+
-HETATM   29 C5   M0      2      -3.793   7.826   6.022  1.00  0.00           C  
-HETATM   30 O3   M0      2      -1.732   4.011   5.024  1.00  0.00           O  
-HETATM   31 C6   M0      2      -3.927   6.920   4.968  1.00  0.00           C  
-HETATM   32 C7   M0      2      -3.276   5.742   4.766  1.00  0.00           C  
-HETATM   33 O4   M0      2      -0.721   4.852   7.243  1.00  0.00           O  
-HETATM   34 H5   M0      2      -0.621   4.184   6.731  1.00  0.00           H  
-HETATM   35 C1   M0      3      -1.595   4.656  -0.366  1.00  0.00           C  
-HETATM   36 H1   M0      3      -0.934   2.857   2.355  1.00  0.00           H  
-HETATM   37 O1   M0      3      -2.798   4.261  -3.360  1.00  0.00           O  
-HETATM   38 C2   M0      3      -1.061   4.120   0.880  1.00  0.00           C  
-HETATM   39 H2   M0      3      -2.391   1.301   1.878  1.00  0.00           H  
-HETATM   40 C3   M0      3      -1.399   2.987   1.561  1.00  0.00           C  
-HETATM   41 H3   M0      3      -3.703   1.134   0.156  1.00  0.00           H  
-HETATM   42 C4   M0      3      -2.331   1.992   1.259  1.00  0.00           C  
-HETATM   43 H4   M0      3      -3.914   2.561  -1.519  1.00  0.00           H  
-HETATM   44 O2   M0      3      -3.696   5.741  -2.107  1.00  0.00           O1-
-HETATM   45 N1   M0      3      -3.071   4.715  -2.272  1.00  0.00           N1+
-HETATM   46 C5   M0      3      -3.163   1.890   0.190  1.00  0.00           C  
-HETATM   47 O3   M0      3      -1.102   5.705  -0.809  1.00  0.00           O  
-HETATM   48 C6   M0      3      -3.297   2.796  -0.865  1.00  0.00           C  
-HETATM   49 C7   M0      3      -2.646   3.974  -1.066  1.00  0.00           C  
-HETATM   50 O4   M0      3      -0.091   4.863   1.411  1.00  0.00           O  
-HETATM   51 H5   M0      3       0.009   5.532   0.898  1.00  0.00           H  
-HETATM   52 C1   M0      4       0.965   1.417   6.199  1.00  0.00           C  
-HETATM   53 H1   M0      4       0.304  -0.382   3.477  1.00  0.00           H  
-HETATM   54 O1   M0      4       3.066   2.503   7.939  1.00  0.00           O  
-HETATM   55 C2   M0      4       0.431   0.882   4.953  1.00  0.00           C  
-HETATM   56 H2   M0      4       1.761  -1.938   3.954  1.00  0.00           H  
-HETATM   57 C3   M0      4       0.770  -0.251   4.271  1.00  0.00           C  
-HETATM   58 H3   M0      4       3.073  -2.105   5.676  1.00  0.00           H  
-HETATM   59 C4   M0      4       1.701  -1.246   4.573  1.00  0.00           C  
-HETATM   60 H4   M0      4       3.285  -0.678   7.351  1.00  0.00           H  
-HETATM   61 O2   M0      4       2.168   1.023   9.193  1.00  0.00           O1-
-HETATM   62 N1   M0      4       2.441   1.476   8.105  1.00  0.00           N1+
-HETATM   63 C5   M0      4       2.534  -1.349   5.643  1.00  0.00           C  
-HETATM   64 O3   M0      4       0.472   2.466   6.641  1.00  0.00           O  
-HETATM   65 C6   M0      4       2.667  -0.443   6.697  1.00  0.00           C  
-HETATM   66 C7   M0      4       2.017   0.735   6.898  1.00  0.00           C  
-HETATM   67 O4   M0      4      -0.538   1.625   4.422  1.00  0.00           O  
-HETATM   68 H5   M0      4      -0.639   2.293   4.934  1.00  0.00           H  
-TER      69      M0      4 
-CONECT    1    4   13   15
-CONECT    2    6
-CONECT    3   11
-CONECT    4    6   16
-CONECT    5    8
-CONECT    6    8
-CONECT    7   12
-CONECT    8   12
-CONECT    9   14
-CONECT   10   11
-CONECT   11   15
-CONECT   12   14
-CONECT   14   15
-CONECT   16   17
-CONECT   18   21   30   32
-CONECT   19   23
-CONECT   20   28
-CONECT   21   23   33
-CONECT   22   25
-CONECT   23   25
-CONECT   24   29
-CONECT   25   29
-CONECT   26   31
-CONECT   27   28
-CONECT   28   32
-CONECT   29   31
-CONECT   31   32
-CONECT   33   34
-CONECT   35   38   47   49
-CONECT   36   40
-CONECT   37   45
-CONECT   38   40   50
-CONECT   39   42
-CONECT   40   42
-CONECT   41   46
-CONECT   42   46
-CONECT   43   48
-CONECT   44   45
-CONECT   45   49
-CONECT   46   48
-CONECT   48   49
-CONECT   50   51
-CONECT   52   55   64   66
-CONECT   53   57
-CONECT   54   62
-CONECT   55   57   67
-CONECT   56   59
-CONECT   57   59
-CONECT   58   63
-CONECT   59   63
-CONECT   60   65
-CONECT   61   62
-CONECT   62   66
-CONECT   63   65
-CONECT   65   66
-CONECT   67   68
+COMPND    2-Hydroxy-7-nitrocyclohepta-2,4,6-trien-1-one 
+AUTHOR    GENERATED BY OPEN BABEL 3.1.0
+CRYST1    9.617    6.477   11.733  90.00  96.16  90.00 P 1 21/c 1  1
+HETATM    1  C   UNL     1       1.595   1.821   0.366  1.00  0.00           C  
+HETATM    2  C   UNL     1       1.061   2.357  -0.880  1.00  0.00           C  
+HETATM    3  C   UNL     1       1.399   3.490  -1.561  1.00  0.00           C  
+HETATM    4  C   UNL     1       2.331   4.485  -1.259  1.00  0.00           C  
+HETATM    5  C   UNL     1       3.163   4.587  -0.190  1.00  0.00           C  
+HETATM    6  C   UNL     1       3.297   3.682   0.865  1.00  0.00           C  
+HETATM    7  C   UNL     1       2.646   2.503   1.066  1.00  0.00           C  
+HETATM    8  H   UNL     1      -0.009   0.946  -0.898  1.00  0.00           H  
+HETATM    9  H   UNL     1       0.934   3.620  -2.355  1.00  0.00           H  
+HETATM   10  H   UNL     1       2.391   5.177  -1.878  1.00  0.00           H  
+HETATM   11  H   UNL     1       3.703   5.344  -0.156  1.00  0.00           H  
+HETATM   12  H   UNL     1       3.914   3.916   1.519  1.00  0.00           H  
+HETATM   13  N   UNL     1       3.071   1.762   2.272  1.00  0.00           N  
+HETATM   14  O   UNL     1       1.102   0.772   0.809  1.00  0.00           O  
+HETATM   15  O   UNL     1       0.091   1.614  -1.411  1.00  0.00           O  
+HETATM   16  O   UNL     1       3.696   0.736   2.107  1.00  0.00           O  
+HETATM   17  O   UNL     1       2.798   2.216   3.360  1.00  0.00           O  
+CONECT    1    2   14   14    7                                       
+CONECT    2    3    3   15    1                                       
+CONECT    3    9    4    2    2                                       
+CONECT    4   10    3    5    5                                       
+CONECT    5    4    4   11    6                                       
+CONECT    6    5    7    7   12                                       
+CONECT    7    1    6    6   13                                       
+CONECT    8   15                                                      
+CONECT    9    3                                                      
+CONECT   10    4                                                      
+CONECT   11    5                                                      
+CONECT   12    6                                                      
+CONECT   13    7   16   16   17                                       
+CONECT   13   17                                                      
+CONECT   14    1    1                                                 
+CONECT   15    8    2                                                 
+CONECT   16   13   13                                                 
+CONECT   17   13   13                                                 
+MASTER        0    0    0    0    0    0    0    0   17    0   17    0
 END
