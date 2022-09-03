@@ -24,14 +24,6 @@ between those states. If box paarameters minimization is performed, the initial 
 4. `initial_states` and `final_states` directories contain the .xml state files from OpenMM saved before and after energy minimzation.
 5. `dminimized_PDB_supercell` directory contains the PDB files of the minimized supercell system.
 
-## Examples
-
-The `examples` folder contains scripts for a reduced subset of 10 COD ID values with the expected outputs stored in the `expected_data` directory. For all, ensure the working directory is set to `/examples`.
-1. Run `example_COD_import.py`.
-2. Run `example_supercell_generation.py`.
-3. Run `example_main.py`.
-4. Compare the generated data in `example_data` to `expected_data`.
-
 ## Current Issues
 
 `COD_ID_List.txt` is not curated of entries that have data issues (non-matching coordinates between CIF and SMILES
