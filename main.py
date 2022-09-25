@@ -379,21 +379,21 @@ def get_rmsd_n(pdb_path_1, pdb_path_2, n):
         for j in range(number_of_atom):
             for k in range(3):
                 if k == 0:
-                    if (abs((pos1_moleculeList[i][j][k] - pos2_moleculeList[i][j][k])) > 0.5 * box_parameter_new[0]):
+                    if (abs((pos1_moleculeList[i][j][k] - pos2_moleculeList[i][j][k])) > 0.95 * box_parameter_new[0]):
                         if (pos1_moleculeList[i][j][k] < pos2_moleculeList[i][j][k]):
                             temp_x = pos2_moleculeList[i][j][k] - box_parameter_new[0]
                         if (pos1_moleculeList[i][j][k] > pos2_moleculeList[i][j][k]):
                             temp_x = pos2_moleculeList[i][j][k] + box_parameter_new[0]
                         pos2_moleculeList[i][j][k] = temp_x
                 elif k == 1:
-                    if (abs((pos1_moleculeList[i][j][k] - pos2_moleculeList[i][j][k])) > 0.5 * box_parameter_new[1]):
+                    if (abs((pos1_moleculeList[i][j][k] - pos2_moleculeList[i][j][k])) > 0.95 * box_parameter_new[1]):
                         if (pos1_moleculeList[i][j][k] < pos2_moleculeList[i][j][k]):
                             temp_y = pos2_moleculeList[i][j][k] - box_parameter_new[1]
                         if (pos1_moleculeList[i][j][k] > pos2_moleculeList[i][j][k]):
                             temp_y = pos2_moleculeList[i][j][k] + box_parameter_new[1]
                         pos2_moleculeList[i][j][k] = temp_y
                 elif k == 2:
-                    if (abs((pos1_moleculeList[i][j][k] - pos2_moleculeList[i][j][k])) > 0.5 * box_parameter_new[2]):
+                    if (abs((pos1_moleculeList[i][j][k] - pos2_moleculeList[i][j][k])) > 0.95 * box_parameter_new[2]):
                         if (pos1_moleculeList[i][j][k] < pos2_moleculeList[i][j][k]):
                             temp_z = pos2_moleculeList[i][j][k] - box_parameter_new[2]
                         if (pos1_moleculeList[i][j][k] > pos2_moleculeList[i][j][k]):
@@ -412,7 +412,7 @@ def get_rmsd_n(pdb_path_1, pdb_path_2, n):
             for j in range(number_of_atom):
                 for k in range(3):
                     if k == 0:
-                        if (abs((pos2_moleculeList_rmv[atom][j][k] - pos2_moleculeList_rmv[i][j][k])) > 0.5 * box_parameter_new[0]):
+                        if (abs((pos2_moleculeList_rmv[atom][j][k] - pos2_moleculeList_rmv[i][j][k])) > 0.95 * box_parameter_new[0]):
                             if (pos2_moleculeList_rmv[atom][j][k] < pos2_moleculeList_rmv[i][j][k]):
                                 temp_x1 = pos1_moleculeList_rmv[i][j][k] - box_parameter[0]
                                 temp_x2 = pos2_moleculeList_rmv[i][j][k] - box_parameter_new[0]
@@ -422,7 +422,7 @@ def get_rmsd_n(pdb_path_1, pdb_path_2, n):
                             pos1_moleculeList_rmv[i][j][k] = temp_x1
                             pos2_moleculeList_rmv[i][j][k] = temp_x2
                     elif k == 1:
-                        if (abs((pos2_moleculeList_rmv[atom][j][k] - pos2_moleculeList_rmv[i][j][k])) > 0.5 * box_parameter_new[1]):
+                        if (abs((pos2_moleculeList_rmv[atom][j][k] - pos2_moleculeList_rmv[i][j][k])) > 0.95 * box_parameter_new[1]):
                             if (pos2_moleculeList_rmv[atom][j][k] < pos2_moleculeList_rmv[i][j][k]):
                                 temp_y1 = pos1_moleculeList_rmv[i][j][k] - box_parameter[1]
                                 temp_y2 = pos2_moleculeList_rmv[i][j][k] - box_parameter_new[1]
@@ -432,7 +432,7 @@ def get_rmsd_n(pdb_path_1, pdb_path_2, n):
                             pos1_moleculeList_rmv[i][j][k] = temp_y1
                             pos2_moleculeList_rmv[i][j][k] = temp_y2
                     elif k == 2:
-                        if (abs((pos2_moleculeList_rmv[atom][j][k] - pos2_moleculeList_rmv[i][j][k])) > 0.5 * box_parameter_new[2]):
+                        if (abs((pos2_moleculeList_rmv[atom][j][k] - pos2_moleculeList_rmv[i][j][k])) > 0.95 * box_parameter_new[2]):
                             if (pos2_moleculeList_rmv[atom][j][k] < pos2_moleculeList_rmv[i][j][k]):
                                 temp_z1 = pos1_moleculeList_rmv[i][j][k] - box_parameter[2]
                                 temp_z2 = pos2_moleculeList_rmv[i][j][k] - box_parameter_new[2]
@@ -514,6 +514,7 @@ for pdb in os.listdir('data/PDB'):
     # load pdb with one copy of pdb file
     cod_id = pdb.split('.')[0]
     print(cod_id)
+
     try:
         try:
             # get smiles from all_smilies
@@ -719,6 +720,9 @@ for pdb in os.listdir('data/PDB'):
             })
         with open('data/rmsd_values.txt', 'a') as f:
             f.write('%s\t%s\n' % (cod_id, sum(rmsd20)/len(rmsd20)))
+
+
+
     except Exception as e:
         logging.error('Generic error with ID %s' % cod_id)
         logging.error(e)

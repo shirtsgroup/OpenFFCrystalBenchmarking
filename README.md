@@ -6,7 +6,30 @@ the OpenMM (https://openmm.org/) molecular simulation tookit and OpenFF (https:/
 
 ## Usage
 
-Project was coded for Python 3.9. Refer to `requirements.txt` file for required packages. GPU is needed.
+Project was coded for Python 3.9. GPU is needed.
+
+## Setup environment
+
+1. In `OpenFFCrystalBenchmarking` directory, 
+
+```
+conda env create -f environment.yml
+```
+
+2. Activate it:
+
+```
+conda activate OpenFFCrystall_GPU
+```
+
+3. Install pyxtal
+
+```
+pip install pyxtal
+```
+
+4. add oelicense.txt in `OpenFFCrystalBenchmarking` directory
+
 
 ## Current Workflow
 
