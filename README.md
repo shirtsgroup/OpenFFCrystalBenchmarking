@@ -19,7 +19,7 @@ conda env create -f environment.yml
 2. Activate it:
 
 ```
-conda activate xtalmd
+conda activate OpenFFCrystall_GPU
 ```
 
 3. Install pyxtal
@@ -28,7 +28,7 @@ conda activate xtalmd
 pip install pyxtal
 ```
 
-4. add oelicense.txt In `OpenFFCrystalBenchmarking` directory
+4. add oelicense.txt in `OpenFFCrystalBenchmarking` directory
 
 
 ## Current Workflow
