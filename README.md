@@ -6,7 +6,7 @@ the OpenMM (https://openmm.org/) molecular simulation tookit and OpenFF (https:/
 
 ## Usage
 
-Project was coded for Python 3.9. Refer to `requirements.txt` file for required packages. GPU is needed.
+Project was coded for Python 3.9. GPU is needed.
 
 ## Setup environment
 
