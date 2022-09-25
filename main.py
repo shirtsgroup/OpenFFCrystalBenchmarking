@@ -643,11 +643,11 @@ for pdb in os.listdir('data/PDB'):
         try:
             # try L-BFGS-B minimization first
             method = 'L-BFGS-B'
-            result = minimize(box_energy, x, (simulation.context, n), method='L-BFGS-B', jac=jacobian, options={'disp': 1, 'maxiter': 100})
+            result = minimize(box_energy, x, (simulation.context, n), method='L-BFGS-B', jac=jacobian, options={'disp': 1, 'maxiter': 1})
         except:
             # try trust-constr minimization first
             method = 'trust-constr'
-            result = minimize(box_energy, x, (simulation.context, n), method='trust-constr', constraints=cons, jac=jacobian, options={'disp': 1, 'xtol': 1e-08, 'gtol': 1e-08, 'maxiter': 100})
+            result = minimize(box_energy, x, (simulation.context, n), method='trust-constr', constraints=cons, jac=jacobian, options={'disp': 1, 'xtol': 1e-08, 'gtol': 1e-08, 'maxiter': 1})
 
         # save and print the result
         x_new = result.x
