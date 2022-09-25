@@ -28,7 +28,7 @@ conda activate OpenFFCrystall_GPU
 pip install pyxtal
 ```
 
-4. add oelicense.txt in `OpenFFCrystalBenchmarking` directory
+4. add `oelicense.txt` in `OpenFFCrystalBenchmarking` directory
 
 
 ## Current Workflow
