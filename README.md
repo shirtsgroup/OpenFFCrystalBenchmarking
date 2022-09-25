@@ -8,6 +8,29 @@ the OpenMM (https://openmm.org/) molecular simulation tookit and OpenFF (https:/
 
 Project was coded for Python 3.9. Refer to `requirements.txt` file for required packages. GPU is needed.
 
+## Setting
+
+1. In `OpenFFCrystalBenchmarking` directory, 
+
+```
+conda env create -f environment.yml
+```
+
+2. Activate it:
+
+```
+conda activate xtalmd
+```
+
+3. Install pyxtal
+
+```
+pip install pyxtal
+```
+
+4. add oelicense.txt In `OpenFFCrystalBenchmarking` directory
+
+
 ## Current Workflow
 
 1. Download list of desired structures from COD using list of COD IDs in `COD_ID_List.txt` and `COD_import.py` script. This downloads CIF files from COD and converts to PDB format using pybel. These are output in the `data/CIF` and `data/PDB` directories.
