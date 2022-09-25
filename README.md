@@ -8,7 +8,7 @@ the OpenMM (https://openmm.org/) molecular simulation tookit and OpenFF (https:/
 
 Project was coded for Python 3.9. Refer to `requirements.txt` file for required packages. GPU is needed.
 
-## Setting
+## Setup environment
 
 1. In `OpenFFCrystalBenchmarking` directory, 
 
