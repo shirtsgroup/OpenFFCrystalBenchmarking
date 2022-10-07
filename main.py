@@ -2,7 +2,7 @@
 import os
 import numpy as np
 from rdkit import Chem
-from openff.toolkit.topology import Molecule,Topology
+from openff.toolkit.topology import Molecule, Topology
 from openff.toolkit.utils import RDKitToolkitWrapper
 import openmm
 from simtk.openmm import app
@@ -64,6 +64,7 @@ def matrix2para(matrix, radians=False):
         cell_para[4] *= deg
         cell_para[5] *= deg
     return cell_para
+
 
 def para2matrix(cell_para, radians=False, format="lower"):
     """
@@ -128,52 +129,55 @@ def para2matrix(cell_para, radians=False, format="lower"):
             return None
     return matrix
 
-def box_energy(x,*args):
+
+def box_energy(x, *args):
     # x is np array of 3*n(atoms) fractional position and 6 triclinical box parameters
     # Return the energy of the system (in kJ/mol)
     # *args will have the simulation context and n (number of particles)
     context = args[0]
     n = args[1]
     # Build frac position array
-    frac_positions_arr = np.empty([n,3])
+    frac_positions_arr = np.empty([n, 3])
     for i in range(int(n)):
-        frac_positions_arr[i][0] = x[i*3]
-        frac_positions_arr[i][1] = x[i*3+1]
-        frac_positions_arr[i][2] = x[i*3+2]
+        frac_positions_arr[i][0] = x[i * 3]
+        frac_positions_arr[i][1] = x[i * 3 + 1]
+        frac_positions_arr[i][2] = x[i * 3 + 2]
     # Build 6 triclinical box parameters
-    box_parameter = [x[n*3], x[n*3+1], x[n*3+2], x[n*3+3], x[n*3+4], x[n*3+5]]
+    box_parameter = x[n * 3: 3 * n + 6]
     # convert box parameter to box vector
     box_vectors = para2matrix(box_parameter, radians=False, format="lower")
     # Build periodic box vectors
-    a = np.array([box_vectors[0][0],0,0])
-    b = np.array([box_vectors[1][0],box_vectors[1][1],0])
-    c = np.array([box_vectors[2][0],box_vectors[2][1],box_vectors[2][2]])
+    a = np.array([box_vectors[0][0], 0, 0])
+    b = np.array([box_vectors[1][0], box_vectors[1][1], 0])
+    c = np.array([box_vectors[2][0], box_vectors[2][1], box_vectors[2][2]])
     # convert fractional position to atom position
     positions_arr = np.matmul(box_vectors, frac_positions_arr.T).T
     # Set Context with positions and periodic boundary conditions
     context.setPositions(positions_arr)
-    context.setPeriodicBoxVectors(a,b,c)
+    context.setPeriodicBoxVectors(a, b, c)
     # Return Energy
     energy = context.getState(getEnergy=True).getPotentialEnergy().value_in_unit(unit.kilojoule_per_mole)
     return energy
 
-def jacobian(x,*args):
+
+def jacobian(x, *args):
     # x is np array of 3*n(atoms) fractional position and 6 triclinical box parameters
     # must return a n*3 + 6 box parameters with derivative of energy with respect to each input parameter
     # for positions, return given forces
     context = args[0]
     n = args[1]
     # energy = context.getState(getEnergy=True).getPotentialEnergy().value_in_unit(unit.kilojoule_per_mole)
-    forces = -1*context.getState(getForces=True).getForces(asNumpy=True).value_in_unit(unit.kilojoule_per_mole/(unit.nano*unit.meter))
+    forces = -1 * context.getState(getForces=True).getForces(asNumpy=True).value_in_unit(
+        unit.kilojoule_per_mole / (unit.nano * unit.meter))
     jac = forces.flatten()
 
     # Positions
-    frac_positions_arr = np.empty([n,3])
+    frac_positions_arr = np.empty([n, 3])
     for i in range(int(n)):
-        frac_positions_arr[i][:] = x[i*3:i*3+3]
+        frac_positions_arr[i][:] = x[i * 3:i * 3 + 3]
 
     # convert box parameter to box vector for atom fractional position
-    box_parameter = [x[n * 3], x[n * 3 + 1], x[n * 3 + 2], x[n * 3 + 3], x[n * 3 + 4], x[n * 3 + 5]]
+    box_parameter = x[n * 3: 3 * n + 6]
     box_vectors = para2matrix(box_parameter, radians=False, format="lower")
 
     # convert fractional position to atom position
@@ -188,9 +192,10 @@ def jacobian(x,*args):
         temp_L = x[n * 3 + i] - epsilon * x[n * 3 + i]
         dstep = temp_U - temp_L
 
-        temp_box_parameters = np.array([x[n * 3], x[n * 3 + 1], x[n * 3 + 2], x[n * 3 + 3], x[n * 3 + 4], x[n * 3 + 5]])
-        temp_box_parameters[i] = temp_U # Replace appropriate entry in box parameter
-        temp_box_vectors = para2matrix(temp_box_parameters, radians=False, format="lower") # convert box parameter to box vector for atom fractional position
+        temp_box_parameters = np.array(x[n * 3: 3 * n + 6])
+        temp_box_parameters[i] = temp_U  # Replace appropriate entry in box parameter
+        temp_box_vectors = para2matrix(temp_box_parameters, radians=False,
+                                       format="lower")  # convert box parameter to box vector for atom fractional position
         # Transform frac coordiantes with new box vectors
         new_positions = np.matmul(temp_box_vectors, frac_positions_arr.T).T
         # convert atom position to fractional position
@@ -198,299 +203,181 @@ def jacobian(x,*args):
         temp_x = np.concatenate((new_frac_positions_arr.flatten(), temp_box_parameters.flatten()))
         energy_U = box_energy(temp_x, context, n)  # compute new energy
 
-        temp_box_parameters = np.array([x[n * 3], x[n * 3 + 1], x[n * 3 + 2], x[n * 3 + 3], x[n * 3 + 4], x[n * 3 + 5]])
-        temp_box_parameters[i] = temp_L # Replace appropriate entry in box parameter
-        temp_box_vectors = para2matrix(temp_box_parameters, radians=False, format="lower") # convert box parameter to box vector for atom fractional position
+        temp_box_parameters = np.array(x[n * 3: 3 * n + 6])
+        temp_box_parameters[i] = temp_L  # Replace appropriate entry in box parameter
+        temp_box_vectors = para2matrix(temp_box_parameters, radians=False,
+                                       format="lower")  # convert box parameter to box vector for atom fractional position
         # Transform frac coordiantes with new box vectors
         new_positions = np.matmul(temp_box_vectors, frac_positions_arr.T).T
         # convert atom position to fractional position
         new_frac_positions_arr = np.matmul(np.linalg.inv(temp_box_vectors), new_positions.T).T
         temp_x = np.concatenate((new_frac_positions_arr.flatten(), temp_box_parameters.flatten()))
         energy_L = box_energy(temp_x, context, n)  # compute new energy
-        grad_temp = (energy_U - energy_L) / dstep # compute gradient
+        grad_temp = (energy_U - energy_L) / dstep  # compute gradient
         jac = np.append(jac, grad_temp)  # append to jac
     return jac
 
 
-# Tobias RMSD
-def get_rmsd(pdb_path_1, pdb_path_2):
+def rmv_periodicity(pos1Array, pos2Array):
+    """Calculate Remove Periodicity RMSD
 
-    if not os.path.exists(pdb_path_1):
-        return None
-    if not os.path.exists(pdb_path_2):
-        return None
-    pos1 = app.PDBFile(pdb_path_1).getPositions(asNumpy=True)
-    pos2 = app.PDBFile(pdb_path_2).getPositions(asNumpy=True)
-    topology = app.PDBFile(pdb_path_1).getTopology()
-    non_H_idxs = list()
-    for atom_idx, atom in enumerate(topology.atoms()):
-        if atom.element.atomic_number != 1:
-            non_H_idxs.append(atom_idx)
+    keyword arguments:
+    pos1Array(Array)   -- the array of atom position before minimization
+    pos2Array(Array)   -- the array of atom position after minimization
 
-    diff = np.linalg.norm(
-        pos1[non_H_idxs] - pos2[non_H_idxs],
-        axis=1
-    )
-    rmsd = np.sqrt(
-        np.mean(
-            diff ** 2
-        )
-    )
-    return rmsd
+    return
+    pos2Array_r(Array)   -- the array that had been removed Periodicity
+    """
 
-# Remove Periodicity RMSD
-def get_rmsd_r(pdb_path_1, pdb_path_2):
+    pos2Array_r = pos2Array.copy()
+    for i in range(len(pos1Array)):
+        for j in range(3):
+            diff = abs((pos1Array[i][j] - pos2Array_r[i][j]))
+            if diff > 0.5 * box_parameter_new[j]:
+                if pos2Array_r[i][j] > pos1Array[i][j]:
+                    tmp = pos2Array_r[i][j] - box_parameter_new[j]
+                elif pos2Array_r[i][j] < pos1Array[i][j]:
+                    tmp = pos2Array_r[i][j] + box_parameter_new[j]
+                else:
+                    tmp = pos2Array_r[i][j]
+                pos2Array[i][j] = tmp
 
-    if not os.path.exists(pdb_path_1):
-        return None
-    if not os.path.exists(pdb_path_2):
-        return None
+    return pos2Array_r
 
-    # pos1Array (exp) 2D Array - 1. atom 2. x y z
-    # pos2Array (simulation) 2D Array - 1. atom 2. x y z
-    pos1Array = app.PDBFile(pdb_path_1).getPositions(asNumpy=True)
-    pos2Array = app.PDBFile(pdb_path_2).getPositions(asNumpy=True)
-
-    # array to list
-    # pos1List (exp) 2D List - 1. atom 2. x y z
-    # pos2List (simulation) 2D List - 1. atom 2. x y z
-    pos1List = pos1Array.tolist()
-    pos2List = pos2Array.tolist()
-
-    # Record non hydrogen and remove hydrogen for RMSD calculation
-    topology = app.PDBFile(pdb_path_1).getTopology()
-    non_H_idxs = list()
-    H_idxs = list()
-    for atom_idx, atom in enumerate(topology.atoms()):
-        if atom.element.atomic_number != 1:
-            non_H_idxs.append(atom_idx)
-        if atom.element.atomic_number == 1:
-            H_idxs.append(atom_idx)
-            pos1List[atom_idx] = [0, 0, 0]
-            pos2List[atom_idx] = [0, 0, 0]
-
-    # Put atom to molecule in list
-    # pos1List (exp) 3D List - 1. molecule 2. atom 3. x y z
-    # pos2List (simulation) 3D List - 1. molecule 2. atom 3. x y z
-    pos1_moleculeList = []
-    pos2_moleculeList = []
-    for i in range(int(number_of_molecule_in_supercell)):
-       temp1 = []
-       temp2 = []
-       for j in range(number_of_atom):
-           temp1.append(pos1List[j + i * number_of_atom])
-           temp2.append(pos2List[j + i * number_of_atom])
-       pos1_moleculeList.append(temp1)
-       pos2_moleculeList.append(temp2)
-
-   # Remove periodicity
-    for i in range(int(number_of_molecule_in_supercell)):
-        for j in range(number_of_atom):
-            for k in range(3):
-                if k == 0:
-                    if (abs((pos1_moleculeList[i][j][k] - pos2_moleculeList[i][j][k])) > 0.5 * box_parameter_new[0]):
-                        if (pos1_moleculeList[i][j][k] < pos2_moleculeList[i][j][k]):
-                            temp_x = pos2_moleculeList[i][j][k] - box_parameter_new[0]
-                        if (pos1_moleculeList[i][j][k] > pos2_moleculeList[i][j][k]):
-                            temp_x = pos2_moleculeList[i][j][k] + box_parameter_new[0]
-                        pos2_moleculeList[i][j][k] = temp_x
-                elif k == 1:
-                    if (abs((pos1_moleculeList[i][j][k] - pos2_moleculeList[i][j][k])) > 0.5 * box_parameter_new[1]):
-                        if (pos1_moleculeList[i][j][k] < pos2_moleculeList[i][j][k]):
-                            temp_y = pos2_moleculeList[i][j][k] - box_parameter_new[1]
-                        if (pos1_moleculeList[i][j][k] > pos2_moleculeList[i][j][k]):
-                            temp_y = pos2_moleculeList[i][j][k] + box_parameter_new[1]
-                        pos2_moleculeList[i][j][k] = temp_y
-                elif k == 2:
-                    if (abs((pos1_moleculeList[i][j][k] - pos2_moleculeList[i][j][k])) > 0.5 * box_parameter_new[2]):
-                        if (pos1_moleculeList[i][j][k] < pos2_moleculeList[i][j][k]):
-                            temp_z = pos2_moleculeList[i][j][k] - box_parameter_new[2]
-                        if (pos1_moleculeList[i][j][k] > pos2_moleculeList[i][j][k]):
-                            temp_z = pos2_moleculeList[i][j][k] + box_parameter_new[2]
-                        pos2_moleculeList[i][j][k] = temp_z
-
-
-    # Calculate the diff for each molecule
-    diff = np.array(pos1_moleculeList) - np.array(pos2_moleculeList)
-
-
-    # Calculate RMSD
-    rmsd_n = np.sqrt(
-        np.mean(
-            diff ** 2
-        )
-    )
-
-    return rmsd_n
 
 # RMSD 20
-def get_rmsd_n(pdb_path_1, pdb_path_2, n):
+def get_rmsd_option(pdb_path_1, pdb_path_2, option):
+    """Calculate Remove Periodicity RMSD
 
+    keyword arguments:
+    pdb_path_1(list)   -- the list of atom position before minimization
+    pdb_path_2(list)   -- the list of atom position after minimization
+
+    return:
+    option = 0
+    rmsd(float)        -- RMSD
+    option = r
+    rmsd(float)        -- RMSD that remove periodicity
+    option = int
+    rmsd(list)         -- RMSD for option molecule
+
+    """
 
     if not os.path.exists(pdb_path_1):
         return None
     if not os.path.exists(pdb_path_2):
         return None
 
-
     # pos1Array (exp) 2D Array - 1. atom 2. x y z
     # pos2Array (simulation) 2D Array - 1. atom 2. x y z
-    pos1Array = app.PDBFile(pdb_path_1).getPositions(asNumpy=True)
-    pos2Array = app.PDBFile(pdb_path_2).getPositions(asNumpy=True)
-
-
-    # array to list
-    # pos1List (exp) 2D List - 1. atom 2. x y z
-    # pos2List (simulation) 2D List - 1. atom 2. x y z
-    pos1List = pos1Array.tolist()
-    pos2List = pos2Array.tolist()
-
+    pos1Array = np.array(app.PDBFile(pdb_path_1).getPositions(asNumpy=True))
+    pos2Array = np.array(app.PDBFile(pdb_path_2).getPositions(asNumpy=True))
 
     # Record non hydrogen and remove hydrogen for RMSD calculation
     topology = app.PDBFile(pdb_path_1).getTopology()
     non_H_idxs = list()
-    H_idxs = list()
     for atom_idx, atom in enumerate(topology.atoms()):
         if atom.element.atomic_number != 1:
             non_H_idxs.append(atom_idx)
-        if atom.element.atomic_number == 1:
-            H_idxs.append(atom_idx)
-            pos1List[atom_idx] = [0, 0, 0]
-            pos2List[atom_idx] = [0, 0, 0]
 
-
-    # Put atom to molecule in list
-    # pos1List (exp) 3D List - 1. molecule 2. atom 3. x y z
-    # pos2List (simulation) 3D List - 1. molecule 2. atom 3. x y z
-    pos1_moleculeList = []
-    pos2_moleculeList = []
-    for i in range(int(number_of_molecule_in_supercell)):
-        temp1 = []
-        temp2 = []
-        for j in range(number_of_atom):
-            temp1.append(pos1List[j + i * number_of_atom])
-            temp2.append(pos2List[j + i * number_of_atom])
-        pos1_moleculeList.append(temp1)
-        pos2_moleculeList.append(temp2)
-
-
-    # Remove periodicity
-    for i in range(int(number_of_molecule_in_supercell)):
-        for j in range(number_of_atom):
-            for k in range(3):
-                if k == 0:
-                    if (abs((pos1_moleculeList[i][j][k] - pos2_moleculeList[i][j][k])) > 0.95 * box_parameter_new[0]):
-                        if (pos1_moleculeList[i][j][k] < pos2_moleculeList[i][j][k]):
-                            temp_x = pos2_moleculeList[i][j][k] - box_parameter_new[0]
-                        if (pos1_moleculeList[i][j][k] > pos2_moleculeList[i][j][k]):
-                            temp_x = pos2_moleculeList[i][j][k] + box_parameter_new[0]
-                        pos2_moleculeList[i][j][k] = temp_x
-                elif k == 1:
-                    if (abs((pos1_moleculeList[i][j][k] - pos2_moleculeList[i][j][k])) > 0.95 * box_parameter_new[1]):
-                        if (pos1_moleculeList[i][j][k] < pos2_moleculeList[i][j][k]):
-                            temp_y = pos2_moleculeList[i][j][k] - box_parameter_new[1]
-                        if (pos1_moleculeList[i][j][k] > pos2_moleculeList[i][j][k]):
-                            temp_y = pos2_moleculeList[i][j][k] + box_parameter_new[1]
-                        pos2_moleculeList[i][j][k] = temp_y
-                elif k == 2:
-                    if (abs((pos1_moleculeList[i][j][k] - pos2_moleculeList[i][j][k])) > 0.95 * box_parameter_new[2]):
-                        if (pos1_moleculeList[i][j][k] < pos2_moleculeList[i][j][k]):
-                            temp_z = pos2_moleculeList[i][j][k] - box_parameter_new[2]
-                        if (pos1_moleculeList[i][j][k] > pos2_moleculeList[i][j][k]):
-                            temp_z = pos2_moleculeList[i][j][k] + box_parameter_new[2]
-                        pos2_moleculeList[i][j][k] = temp_z
-
-
-    #### RMSD_20 Calculation
-    pos1_moleculeList_rmv = copy.copy(pos1_moleculeList)
-    pos2_moleculeList_rmv = copy.copy(pos2_moleculeList)
-    rmsd_n_all = []
-
-    # Remove periodicity for calculation of distance
-    for atom in range(int(number_of_molecule_in_supercell)):
-        for i in range(int(number_of_molecule_in_supercell)):
-            for j in range(number_of_atom):
-                for k in range(3):
-                    if k == 0:
-                        if (abs((pos2_moleculeList_rmv[atom][j][k] - pos2_moleculeList_rmv[i][j][k])) > 0.95 * box_parameter_new[0]):
-                            if (pos2_moleculeList_rmv[atom][j][k] < pos2_moleculeList_rmv[i][j][k]):
-                                temp_x1 = pos1_moleculeList_rmv[i][j][k] - box_parameter[0]
-                                temp_x2 = pos2_moleculeList_rmv[i][j][k] - box_parameter_new[0]
-                            if (pos2_moleculeList_rmv[atom][j][k] > pos2_moleculeList_rmv[i][j][k]):
-                                temp_x1 = pos1_moleculeList_rmv[i][j][k] + box_parameter[0]
-                                temp_x2 = pos2_moleculeList_rmv[i][j][k] + box_parameter_new[0]
-                            pos1_moleculeList_rmv[i][j][k] = temp_x1
-                            pos2_moleculeList_rmv[i][j][k] = temp_x2
-                    elif k == 1:
-                        if (abs((pos2_moleculeList_rmv[atom][j][k] - pos2_moleculeList_rmv[i][j][k])) > 0.95 * box_parameter_new[1]):
-                            if (pos2_moleculeList_rmv[atom][j][k] < pos2_moleculeList_rmv[i][j][k]):
-                                temp_y1 = pos1_moleculeList_rmv[i][j][k] - box_parameter[1]
-                                temp_y2 = pos2_moleculeList_rmv[i][j][k] - box_parameter_new[1]
-                            if (pos2_moleculeList_rmv[atom][j][k] > pos2_moleculeList_rmv[i][j][k]):
-                                temp_y1 = pos1_moleculeList_rmv[i][j][k] + box_parameter[1]
-                                temp_y2 = pos2_moleculeList_rmv[i][j][k] + box_parameter_new[1]
-                            pos1_moleculeList_rmv[i][j][k] = temp_y1
-                            pos2_moleculeList_rmv[i][j][k] = temp_y2
-                    elif k == 2:
-                        if (abs((pos2_moleculeList_rmv[atom][j][k] - pos2_moleculeList_rmv[i][j][k])) > 0.95 * box_parameter_new[2]):
-                            if (pos2_moleculeList_rmv[atom][j][k] < pos2_moleculeList_rmv[i][j][k]):
-                                temp_z1 = pos1_moleculeList_rmv[i][j][k] - box_parameter[2]
-                                temp_z2 = pos2_moleculeList_rmv[i][j][k] - box_parameter_new[2]
-                            if (pos2_moleculeList_rmv[atom][j][k] > pos2_moleculeList_rmv[i][j][k]):
-                                temp_z1 = pos1_moleculeList_rmv[i][j][k] + box_parameter[2]
-                                temp_z2 = pos2_moleculeList_rmv[i][j][k] + box_parameter_new[2]
-                            pos1_moleculeList_rmv[i][j][k] = temp_z1
-                            pos2_moleculeList_rmv[i][j][k] = temp_z2
-
-
-        # Calculate molecule position
-        mol_positions = []
-        for i in range(int(number_of_molecule_in_supercell)):
-            sum_x = 0
-            sum_y = 0
-            sum_z = 0
-            temp = []
-            for j in range(number_of_atom):
-                sum_x = + sum_x + pos2_moleculeList_rmv[i][j][0]
-                sum_y = + sum_y + pos2_moleculeList_rmv[i][j][1]
-                sum_z = + sum_z + pos2_moleculeList_rmv[i][j][2]
-                mol_x = sum_x / number_of_atom
-                mol_y = sum_y / number_of_atom
-                mol_z = sum_z / number_of_atom
-            temp.append(mol_x)
-            temp.append(mol_y)
-            temp.append(mol_z)
-            mol_positions.append(temp)
-
-
-        # Distance calculation
-        mol_distance = []
-        for i in range(int(number_of_molecule_in_supercell)):
-            mol_distance_diff = np.array(mol_positions[i]) - np.array(mol_positions[atom])
-            sum = mol_distance_diff[0] ** 2 + mol_distance_diff[1] ** 2 + mol_distance_diff[2] ** 2
-            mol_distance.append(sum)
-        tmp = np.array(mol_distance)
-
-
-        # sort and find the n smallest molecule
-        out = np.argsort(tmp)[:n].tolist()
-
-
-        # Calculate the diff for each molecule
-        diff = np.array(pos1_moleculeList)[out] - np.array(pos2_moleculeList)[out]
-
-
-        # Calculate RMSD
-        rmsd_n = np.sqrt(
+    # Tobias RMSD
+    if option == "o":
+        diff = np.linalg.norm(
+            pos1Array[non_H_idxs] - pos2Array[non_H_idxs],
+            axis=1
+        )
+        rmsd = np.sqrt(
             np.mean(
                 diff ** 2
             )
         )
 
-        rmsd_n_all.append(rmsd_n)
+    # Remove Periodicity RMSD
+    elif option == "r":
+
+        # remove periodicity
+        pos2Array_r = rmv_periodicity(pos1Array, pos2Array)
+
+        diff = np.linalg.norm(
+            pos1Array[non_H_idxs] - pos2Array_r[non_H_idxs],
+            axis=1
+        )
+
+        rmsd = np.sqrt(
+            np.mean(
+                diff ** 2
+            )
+        )
 
 
-    return rmsd_n_all
+
+    # RMSD_20 Calculation
+    elif isinstance(option, int):
+
+        n = option
+        rmsd = np.zeros(int(number_of_molecule_in_supercell))
+
+        # remove periodicity
+        pos2Array_r = rmv_periodicity(pos1Array, pos2Array)
+
+        # Remove periodicity for calculation of distance. From first molecule, second, ...
+        for target in range(int(number_of_molecule_in_supercell)):
+            pos1Array_mol = pos1Array.copy()
+            pos2Array_mol = pos2Array_r.copy()
+            pos1Array_mol = pos1Array_mol.reshape(int(number_of_molecule_in_supercell), number_of_atom, 3)
+            pos2Array_mol = pos2Array_mol.reshape(int(number_of_molecule_in_supercell), number_of_atom, 3)
+
+            for i in range(int(number_of_molecule_in_supercell)):
+                for j in range(number_of_atom):
+                    for k in range(3):
+                        diff = abs((pos2Array_mol[target][j][k] - pos2Array_mol[i][j][k]))
+                        if diff > 0.5 * box_parameter_new[k]:
+                            if pos2Array_mol[target][j][k] < pos2Array_mol[i][j][k]:
+                                tmp1 = pos1Array_mol[i][j][k] - box_parameter[k]
+                                tmp2 = pos2Array_mol[i][j][k] - box_parameter_new[k]
+                            elif pos2Array_mol[target][j][k] > pos2Array_mol[i][j][k]:
+                                tmp1 = pos1Array_mol[i][j][k] + box_parameter[k]
+                            else:
+                                tmp1 = pos1Array_mol[i][j][k]
+                                tmp2 = pos2Array_mol[i][j][k]
+                            pos1Array_mol[i][j][k] = tmp1
+                            pos2Array_mol[i][j][k] = tmp2
+
+            # Calculate average molecule position
+            mol_pos = np.mean(pos2Array_mol, axis=1)
+
+            # Distance calculation
+            mol_dis = np.zeros(int(number_of_molecule_in_supercell))
+            for i in range(int(number_of_molecule_in_supercell)):
+                mol_dis_diff = np.array(mol_pos[i]) - np.array(mol_pos[target])
+                mol_dis[i] = np.dot(mol_dis_diff, mol_dis_diff)
+
+            # sort and find the index of n the closest molecule
+            close_idx = np.argsort(mol_dis)[:n].tolist()
+
+            # Calculate the diff for n closest molecule
+            n_pos_diff = np.zeros((int(number_of_molecule_in_supercell), int(number_of_atom), 3))
+            for i in range(len(pos1Array_mol)):
+                if i in close_idx:
+                    n_pos_diff[i] = pos1Array_mol[i] - pos2Array_mol[i]
+
+            # reshape format
+            n_pos_diff = n_pos_diff.flatten().reshape(int(number_of_molecule_in_supercell) * number_of_atom, 3)
+
+            diff = np.linalg.norm(
+                n_pos_diff[non_H_idxs],
+                axis=1
+            )
+
+            rmsd_target = np.sqrt(
+                np.mean(
+                    diff ** 2
+                )
+            )
+
+            rmsd[target] = rmsd_target
+
+    return rmsd
 
 
 # Warning and Logger Setup
@@ -506,7 +393,7 @@ forcefield = ForceField('openff_unconstrained-2.0.0.offxml')
 # Load smiles csv file as pandas
 smiles = pd.read_csv('allcod.smi', names=['SMILES', 'COD ID'], sep='\t')
 # Initialize text file for rmsd values to be recorded
-with open('data/rmsd_values.txt','w') as f:
+with open('data/rmsd_values.txt', 'w') as f:
     f.write('COD ID\tRMSD\n')
 # Initialize empty array to store data from sucessful minimizations
 data = []
@@ -577,26 +464,35 @@ for pdb in os.listdir('data/PDB'):
         box_vectors = para2matrix(box_parameter, radians=False, format="lower")
         # convert atom position to fractional position
         frac_positions_arr = np.matmul(np.linalg.inv(box_vectors), numpy_positions.T).T
-        x = np.append(frac_positions_arr.flatten(), [box_parameter[0], box_parameter[1], box_parameter[2], box_parameter[3], box_parameter[4], box_parameter[5]])
+        x = np.append(frac_positions_arr.flatten(),
+                      [box_parameter[0], box_parameter[1], box_parameter[2], box_parameter[3], box_parameter[4],
+                       box_parameter[5]])
         n = len(frac_positions_arr)
+
 
         # constraint for minimizer
         def constraint1(x):
-            box_parameter = [x[n * 3], x[n * 3 + 1], x[n * 3 + 2], x[n * 3 + 3], x[n * 3 + 4], x[n * 3 + 5]]
+            box_parameter = x[n * 3: 3 * n + 6]
             box_vector = para2matrix(box_parameter, radians=False, format="lower")
             box_vector.flatten()
             value = box_vector[0][0] - 2 * abs(box_vector[1][0])
             return value
+
+
         def constraint2(x):
-            box_parameter = [x[n * 3], x[n * 3 + 1], x[n * 3 + 2], x[n * 3 + 3], x[n * 3 + 4], x[n * 3 + 5]]
+            box_parameter = x[n * 3: 3 * n + 6]
             box_vector = para2matrix(box_parameter, radians=False, format="lower")
             value = box_vector[0][0] - 2 * abs(box_vector[2][0])
             return value
+
+
         def constraint3(x):
-            box_parameter = [x[n * 3], x[n * 3 + 1], x[n * 3 + 2], x[n * 3 + 3], x[n * 3 + 4], x[n * 3 + 5]]
+            box_parameter = x[n * 3: 3 * n + 6]
             box_vector = para2matrix(box_parameter, radians=False, format="lower")
             value = box_vector[1][1] - 2 * abs(box_vector[2][1])
             return value
+
+
         con1 = {'type': 'ineq', 'fun': constraint1}
         con2 = {'type': 'ineq', 'fun': constraint2}
         con3 = {'type': 'ineq', 'fun': constraint3}
@@ -606,7 +502,7 @@ for pdb in os.listdir('data/PDB'):
         cif_file = open('data/CIF/' + cod_id + '.cif', 'r')
         for line in cif_file.readlines():
             if line.startswith("_cell_formula_units_Z"):
-                number_of_molecule = int(re.findall(r"\d+",line)[0])
+                number_of_molecule = int(re.findall(r"\d+", line)[0])
 
         # Extract number of atoms in molecule
         cif_file = open('data/CIF/' + cod_id + '.cif', 'r')
@@ -625,8 +521,6 @@ for pdb in os.listdir('data/PDB'):
                         except:
                             number_of_atom += 1
 
-
-
         # Extract number of atoms in supercell
         f_supercell = open('data/PDB_supercell/' + cod_id + '_supercell.pdb', 'r')
         number_of_atom_in_supercell = 0
@@ -637,21 +531,20 @@ for pdb in os.listdir('data/PDB'):
         # Calculate number of molecules in supercell
         number_of_molecule_in_supercell = number_of_atom_in_supercell / number_of_atom
 
-
-
         # run minimizer
         try:
             # try L-BFGS-B minimization first
             method = 'L-BFGS-B'
-            result = minimize(box_energy, x, (simulation.context, n), method='L-BFGS-B', jac=jacobian, options={'disp': 1, 'maxiter': 1})
+            result = minimize(box_energy, x, (simulation.context, n), method='L-BFGS-B', jac=jacobian,
+                              options={'disp': 1, 'maxiter': 10})
         except:
             # try trust-constr minimization first
             method = 'trust-constr'
-            result = minimize(box_energy, x, (simulation.context, n), method='trust-constr', constraints=cons, jac=jacobian, options={'disp': 1, 'xtol': 1e-08, 'gtol': 1e-08, 'maxiter': 1})
+            result = minimize(box_energy, x, (simulation.context, n), method='trust-constr', constraints=cons, jac=jacobian,
+                              options={'disp': 1, 'xtol': 1e-08, 'gtol': 1e-08, 'maxiter': 1})
 
         # save and print the result
         x_new = result.x
-        print("result", x_new)
 
         # update simulation with minimized positions and box vectors
         frac_positions_arr = np.empty([n, 3])
@@ -659,7 +552,8 @@ for pdb in os.listdir('data/PDB'):
             frac_positions_arr[i][:] = x_new[i * 3:i * 3 + 3]
 
         # convert result to box vector
-        box_parameter_new = [x_new[n * 3], x_new[n * 3 + 1], x_new[n * 3 + 2], x_new[n * 3 + 3], x_new[n * 3 + 4], x_new[n * 3 + 5]]
+        box_parameter_new = x_new[n * 3: 3 * n + 6]
+
         box_vectors_new = para2matrix(box_parameter_new, radians=False, format="lower")
         a = np.array([box_vectors_new[0][0], 0, 0])
         b = np.array([box_vectors_new[1][0], box_vectors_new[1][1], 0])
@@ -684,34 +578,33 @@ for pdb in os.listdir('data/PDB'):
         ### Calculate RMSD
         # mdtraj RMSD
         rmsd_MDTraj = mdtraj.rmsd(initial, final)
-        print("MDTraj rmsd", rmsd_MDTraj[0])
-        # Tobias RMSD
-        rmsd_Tobias = get_rmsd('data/PDB_supercell/' + cod_id + '_supercell.pdb', 'data/minimized_PDB_supercell/' + cod_id + '.pdb')
-        print("Tobias rmsd", rmsd_Tobias)
+        # Original RMSD
+        rmsd_o = get_rmsd_option('data/PDB_supercell/' + cod_id + '_supercell.pdb',
+                                 'data/minimized_PDB_supercell/' + cod_id + '.pdb', "o")
         # Remove Periodicity RMSD
-        rmsd_r = get_rmsd_r('data/PDB_supercell/' + cod_id + '_supercell.pdb', 'data/minimized_PDB_supercell/' + cod_id + '.pdb')
-        print("rmsd_r", rmsd_r)
+        rmsd_r = get_rmsd_option('data/PDB_supercell/' + cod_id + '_supercell.pdb',
+                                 'data/minimized_PDB_supercell/' + cod_id + '.pdb', "r")
         # RMSD 20
-        rmsd20 = get_rmsd_n('data/PDB_supercell/' + cod_id + '_supercell.pdb', 'data/minimized_PDB_supercell/' + cod_id + '.pdb', 20)
-        print("rmsd20", rmsd20)
+        rmsd20 = get_rmsd_option('data/PDB_supercell/' + cod_id + '_supercell.pdb',
+                                 'data/minimized_PDB_supercell/' + cod_id + '.pdb', 20)
 
         data.append(
             {
                 'COD ID': cod_id,
                 'RMSD_mdtraj': rmsd_MDTraj[0],
-                'RMSD_Tobias': rmsd_Tobias,
+                'RMSD_Tobias': rmsd_o,
                 'RMSD (Remove Periodicity)': rmsd_r,
                 'RMSD20': rmsd20,
                 'RMSD20 MAX': max(rmsd20),
                 'RMSD20 MIN': min(rmsd20),
-                'RMSD20 Mean': sum(rmsd20)/len(rmsd20),
+                'RMSD20 Mean': sum(rmsd20) / len(rmsd20),
                 'method': method,
                 'Original Energy': orig_potential,
                 'Minimized Energy (OpenMM)': mid_potential,
                 'Minimized Energy (Cell Minimization)': min_potential,
-                'Original Energy/molecule': orig_potential/number_of_molecule_in_supercell,
-                'Minimized Energy (OpenMM)/molecule': mid_potential/number_of_molecule_in_supercell,
-                'Minimized Energy (Cell Minimization)/molecule': min_potential/number_of_molecule_in_supercell,
+                'Original Energy/molecule': orig_potential / number_of_molecule_in_supercell,
+                'Minimized Energy (OpenMM)/molecule': mid_potential / number_of_molecule_in_supercell,
+                'Minimized Energy (Cell Minimization)/molecule': min_potential / number_of_molecule_in_supercell,
                 'Original Box Vectors': A,
                 'Minimized Box Vectors': np.array([a, b, c]),
                 'Original Box parameters': box_parameter,
@@ -719,9 +612,7 @@ for pdb in os.listdir('data/PDB'):
 
             })
         with open('data/rmsd_values.txt', 'a') as f:
-            f.write('%s\t%s\n' % (cod_id, sum(rmsd20)/len(rmsd20)))
-
-
+            f.write('%s\t%s\n' % (cod_id, sum(rmsd20) / len(rmsd20)))
 
     except Exception as e:
         logging.error('Generic error with ID %s' % cod_id)
@@ -734,4 +625,3 @@ try:
     d.to_pickle('data/minimization_results.pkl')
 except Exception as e:
     logging.error('Error with save of results data')
-

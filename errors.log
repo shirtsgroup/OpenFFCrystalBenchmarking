@@ -1,0 +1,345 @@
+ERROR:root:Generic error with ID 4500369
+ERROR:root:local variable 'tmp2' referenced before assignment
+ERROR:root:PDB/SMILES error with ID 2104943
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 2015070
+ERROR:root:Unable to make OFFMol from RDMol: Unable to make OFFMol from SMILES: RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 6 (atoms 1-7 of element (C-C)
+
+ERROR:root:PDB/SMILES error with ID 2105330
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 4129192
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 2107937
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 2100349
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:Generic error with ID 1549860
+ERROR:root:local variable 'tmp2' referenced before assignment
+ERROR:root:PDB/SMILES error with ID 2007511
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:Generic error with ID 2229458
+ERROR:root:local variable 'tmp2' referenced before assignment
+ERROR:root:PDB/SMILES error with ID 2002929
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 1100994
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 3500113
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 2021969
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 2020594
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 7157439
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 2204871
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 1517337
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:Generic error with ID 2206832
+ERROR:root:local variable 'tmp2' referenced before assignment
+ERROR:root:PDB/SMILES error with ID 4026675
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 4116203
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 1545026
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 2236654
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 1555524
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 7121743
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 4023405
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 4116819
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 7054571
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 9009215
+ERROR:root:Python argument types in
+    Mol.__init__(Mol, NoneType)
+did not match C++ signature:
+    __init__(_object*, RDKit::ROMol mol, bool quickCopy=False, int confId=-1)
+    __init__(_object*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > pklString, unsigned int propertyFlags)
+    __init__(_object*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > pklString)
+    __init__(_object*)
+ERROR:root:Generic error with ID 2241317
+ERROR:root:local variable 'tmp2' referenced before assignment
+ERROR:root:PDB/SMILES error with ID 2021921
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 7238219
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 4038405
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 7220866
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:Generic error with ID 4507100
+ERROR:root:local variable 'tmp2' referenced before assignment
+ERROR:root:Generic error with ID 4515127
+ERROR:root:local variable 'tmp2' referenced before assignment
+ERROR:root:PDB/SMILES error with ID 2105026
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:Generic error with ID 4037918
+ERROR:root:local variable 'tmp2' referenced before assignment
+ERROR:root:PDB/SMILES error with ID 7232896
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 4501703
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 2206506
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 2100665
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 2203632
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:Generic error with ID 2208241
+ERROR:root:local variable 'tmp2' referenced before assignment
+ERROR:root:PDB/SMILES error with ID 7200842
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 7204117
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 2200599
+ERROR:root:Python argument types in
+    Mol.__init__(Mol, NoneType)
+did not match C++ signature:
+    __init__(_object*, RDKit::ROMol mol, bool quickCopy=False, int confId=-1)
+    __init__(_object*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > pklString, unsigned int propertyFlags)
+    __init__(_object*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > pklString)
+    __init__(_object*)
+ERROR:root:PDB/SMILES error with ID 7226905
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 7238221
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 4517841
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 4508010
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:Generic error with ID 2008185
+ERROR:root:Particle coordinate is nan
+ERROR:root:PDB/SMILES error with ID 2100348
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:Generic error with ID 4037663
+ERROR:root:Periodic box vectors must be in reduced form.
+ERROR:root:Generic error with ID 1100989
+ERROR:root:local variable 'tmp2' referenced before assignment
+ERROR:root:PDB/SMILES error with ID 2019369
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:Generic error with ID 2224771
+ERROR:root:local variable 'tmp2' referenced before assignment
+ERROR:root:PDB/SMILES error with ID 2213278
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:Generic error with ID 7118053
+ERROR:root:local variable 'tmp2' referenced before assignment
+ERROR:root:PDB/SMILES error with ID 7117643
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 7236728
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:Topology error with ID 2100437
+ERROR:root:No match found for molecule C1024H2048N512O768. 
+ERROR:root:PDB/SMILES error with ID 4501702
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 7239749
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 2014075
+ERROR:root:Explicit valence for atom # 7 N, 4, is greater than permitted
+ERROR:root:PDB/SMILES error with ID 2100350
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 2206365
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 7208075
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 2022073
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 2200844
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 7204118
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 4512518
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 1011063
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 2022053
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 2201333
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 2311655
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 7103002
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 2014575
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 7241270
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:Generic error with ID 2229006
+ERROR:root:local variable 'tmp2' referenced before assignment
+ERROR:root:PDB/SMILES error with ID 7235707
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 4116821
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 7208855
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 4126462
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 2231429
+ERROR:root:Python argument types in
+    Mol.__init__(Mol, NoneType)
+did not match C++ signature:
+    __init__(_object*, RDKit::ROMol mol, bool quickCopy=False, int confId=-1)
+    __init__(_object*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > pklString, unsigned int propertyFlags)
+    __init__(_object*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > pklString)
+    __init__(_object*)
+ERROR:root:Generic error with ID 2208497
+ERROR:root:local variable 'tmp2' referenced before assignment
+ERROR:root:PDB/SMILES error with ID 2018231
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 2234064
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 1517792
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 1504349
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 2203306
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 4508037
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 7236113
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 1516355
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 2100840
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 4511277
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 2022026
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 7241376
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 7121745
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 2220988
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 7242545
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 2201115
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:Generic error with ID 7052009
+ERROR:root:local variable 'tmp2' referenced before assignment
+ERROR:root:Generic error with ID 2220694
+ERROR:root:local variable 'tmp2' referenced before assignment
+ERROR:root:PDB/SMILES error with ID 5000167
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 1504385
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:Generic error with ID 2007155
+ERROR:root:local variable 'tmp2' referenced before assignment
+ERROR:root:PDB/SMILES error with ID 2003630
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 4516576
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 7204577
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 4126195
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 2212018
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:Generic error with ID 2238379
+ERROR:root:local variable 'tmp2' referenced before assignment
+ERROR:root:PDB/SMILES error with ID 1011023
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 4506226
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 1010439
+ERROR:root:Python argument types in
+    Mol.__init__(Mol, NoneType)
+did not match C++ signature:
+    __init__(_object*, RDKit::ROMol mol, bool quickCopy=False, int confId=-1)
+    __init__(_object*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > pklString, unsigned int propertyFlags)
+    __init__(_object*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > pklString)
+    __init__(_object*)
+ERROR:root:Generic error with ID 1519191
+ERROR:root:local variable 'tmp2' referenced before assignment
+ERROR:root:PDB/SMILES error with ID 1011024
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 7226846
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 1520159
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 7110463
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:Generic error with ID 2237770
+ERROR:root:Particle coordinate is nan
+ERROR:root:Generic error with ID 2206542
+ERROR:root:local variable 'tmp2' referenced before assignment
+ERROR:root:Generic error with ID 2221170
+ERROR:root:local variable 'tmp2' referenced before assignment
+ERROR:root:PDB/SMILES error with ID 2100147
+ERROR:root:Python argument types in
+    Mol.__init__(Mol, NoneType)
+did not match C++ signature:
+    __init__(_object*, RDKit::ROMol mol, bool quickCopy=False, int confId=-1)
+    __init__(_object*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > pklString, unsigned int propertyFlags)
+    __init__(_object*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > pklString)
+    __init__(_object*)
+ERROR:root:PDB/SMILES error with ID 2311654
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 1010060
+ERROR:root:Python argument types in
+    Mol.__init__(Mol, NoneType)
+did not match C++ signature:
+    __init__(_object*, RDKit::ROMol mol, bool quickCopy=False, int confId=-1)
+    __init__(_object*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > pklString, unsigned int propertyFlags)
+    __init__(_object*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > pklString)
+    __init__(_object*)
+ERROR:root:PDB/SMILES error with ID 7238218
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:Generic error with ID 2004431
+ERROR:root:local variable 'tmp2' referenced before assignment
+ERROR:root:PDB/SMILES error with ID 2100603
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 4511275
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 2206151
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 4110681
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 4513829
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 7154066
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 2107938
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 7221877
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:Generic error with ID 7151750
+ERROR:root:local variable 'tmp2' referenced before assignment
+ERROR:root:PDB/SMILES error with ID 2006784
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:Generic error with ID 2007371
+ERROR:root:local variable 'tmp2' referenced before assignment
+ERROR:root:PDB/SMILES error with ID 7111201
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 3500112
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 2234776
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 4507991
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:Generic error with ID 2016262
+ERROR:root:Particle coordinate is nan
+ERROR:root:PDB/SMILES error with ID 4501704
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:PDB/SMILES error with ID 7059603
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 1556231
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 2101393
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 2008677
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 1557858
+ERROR:root:index 0 is out of bounds for axis 0 with size 0
+ERROR:root:PDB/SMILES error with ID 2105032
+ERROR:root:The PDB and SMILES structures do not match.
+ERROR:root:Generic error with ID 2234322
+ERROR:root:local variable 'tmp2' referenced before assignment
+ERROR:root:Error with save of results data

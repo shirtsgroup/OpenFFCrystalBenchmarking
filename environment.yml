@@ -1,4 +1,4 @@
-name: OpenFFCrystall_GPU
+name: OpenFFCrystall_GPU_test
 channels:
   - openeye
   - schrodinger
