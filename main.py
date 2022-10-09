@@ -240,7 +240,7 @@ def rmv_periodicity(pos1Array, pos2Array):
                     tmp = pos2Array_r[i][j] + box_parameter_new[j]
                 else:
                     tmp = pos2Array_r[i][j]
-                pos2Array[i][j] = tmp
+                pos2Array_r[i][j] = tmp
 
     return pos2Array_r
 
@@ -337,6 +337,7 @@ def get_rmsd_option(pdb_path_1, pdb_path_2, option):
                                 tmp2 = pos2Array_mol[i][j][k] - box_parameter_new[k]
                             elif pos2Array_mol[target][j][k] > pos2Array_mol[i][j][k]:
                                 tmp1 = pos1Array_mol[i][j][k] + box_parameter[k]
+                                tmp2 = pos2Array_mol[i][j][k] + box_parameter_new[k]
                             else:
                                 tmp1 = pos1Array_mol[i][j][k]
                                 tmp2 = pos2Array_mol[i][j][k]
@@ -536,12 +537,12 @@ for pdb in os.listdir('data/PDB'):
             # try L-BFGS-B minimization first
             method = 'L-BFGS-B'
             result = minimize(box_energy, x, (simulation.context, n), method='L-BFGS-B', jac=jacobian,
-                              options={'disp': 1, 'maxiter': 10})
+                              options={'disp': 1, 'maxiter': 100})
         except:
             # try trust-constr minimization first
             method = 'trust-constr'
             result = minimize(box_energy, x, (simulation.context, n), method='trust-constr', constraints=cons, jac=jacobian,
-                              options={'disp': 1, 'xtol': 1e-08, 'gtol': 1e-08, 'maxiter': 1})
+                              options={'disp': 1, 'xtol': 1e-08, 'gtol': 1e-08, 'maxiter': 100})
 
         # save and print the result
         x_new = result.x
